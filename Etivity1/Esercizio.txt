@@ -12,7 +12,7 @@ fa le seguenti operazioni:
         c) una directory di output (es. c:\Documenti\RisultatiRicerca)
 		PARAM3
 		
-2) cercare PARAM1 in tutti i file presenti in PARAM2 e in tutte le sottodirectory.
+2) cercare PARAM1 in tutti i file presenti in PARAM2 e in tutte le sottodirectoryflusso.
 
 In particolare la ricerca dovrà riguardare il nome del file
 (es. se un file si chiama CorrelazioneLineare.dat allora dovrà essere un 

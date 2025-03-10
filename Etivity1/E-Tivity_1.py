@@ -37,6 +37,7 @@ fileType=['*.pdf','*.docx','*.xlsx','*.txt']
 
 
 file_trovati = []                                                                           # Lista per salvare i percorsi trovati
+text_trovate = []
 
 for root, dirs, files in os.walk(dirStart):
     for ext in fileType:                                                                    # In precedenza ho passato al filtro l'intero Array fileType generando errrore                 
@@ -47,31 +48,71 @@ for root, dirs, files in os.walk(dirStart):
                 shutil.copy(file_path,dirEnd)                                               # copio il file nella dirEnd scelta
                 
             if ext.endswith(".pdf"):
-                print("Corrispondenze nel file ", file_path,":")
+                print("Corrispondenze nel file PDF", file_path,":")
                 object = PyPDF2.PdfReader(file_path)                     # accedo al PDF
                 numPages = len(object.pages)                             # conto le pagine del pdf
                 trovato_match=False
                 for i in range(0, numPages):                                # analizzo per i =(0,numPages) ---> da 0 a n.pagine contante in precedenza
-                    pageObj = object.pages[i]                             # accedo alla pagina i-esima
+                    pageObj = object.pages[i]                               # accedo alla pagina i-esima
                     text = pageObj.extract_text()                           # estraggo (leggo) il testo della pagina   
                     for match in re.finditer(pattern, text):                # cerco il pattern nel testo della pagina i-esima che sto analizzando (il ciclo for si attiva solo in caso di corrispondenze)
                         print(f'Page no: {i} | Match: {match}')             # se lo trovo stampo la pagina i-esima e l'oggetto match
                         trovato_match=True
                 
-                if trovato_match:
-                    print("ho trovato corrispondenze tra le pagine del pdf, eseguo copia!")
-                else:
-                    print("Non ho trovato corrispondenze tra le pagine del pdf, non eseguo la copia!")
+                if trovato_match:                    
+                    text_trovate.append(file_path)
+                    shutil.copy(file_path,dirEnd)
                     
             elif ext.endswith(".docx"):
-                print("Qui userai python-docx per estrarre e cercare il pattern nel DOCX", file_path)
+                 print("Corrispondenze nel file Word ", file_path,":")
+                 document = docx.Document(file_path)
+                 text=""
+                 trovato_match=False
+                 for para in document.paragraphs:
+                     text += para.text + "\n"
+                 for match in re.finditer(pattern,text):
+                    print(f"Match: {match}") 
+                    trovato_match = True
+                            
+                 if trovato_match:
+                    text_trovate.append(file_path)
+                    shutil.copy(file_path,dirEnd)
+                 
             elif ext.endswith(".xlsx"):
-                print("Qui userai pandas per leggere e cercare il pattern nel XLSX", file_path)
+                print("Corrispondenze nel file Excel ", file_path,":")
+                df = pd.read_excel(file_path)
+                text = df.to_string()
+                trovato_match=False
+                for match in re.finditer(pattern,text):
+                    print(f"Match: {match}") 
+                    trovato_match = True
+                            
+                if trovato_match:
+                    text_trovate.append(file_path)
+                    shutil.copy(file_path,dirEnd)
+                                
             elif ext.endswith(".txt"):
-                print("Qui userai re.search() direttamente sul testo del TXT", file_path)
+                print("Corrispondenze nel file .txt ", file_path,":")
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    text = f.read()
+                    trovato_match=False
+                    for match in re.finditer(pattern,text):
+                        print(f"Match: {match}") 
+                        trovato_match = True
+                            
+                if trovato_match:
+                    text_trovate.append(file_path)
+                    shutil.copy(file_path,dirEnd)
+
+if text_trovate:
+    print("\nDocumenti che hanno corrispondenza nella parola cercata e che sono stati copiati nella cartella di destinazione:")
+    for parole in text_trovate:
+        print(parole)
+else:
+    print("Nessuna corrispondenza trovata.")
 
 if file_trovati:
-    print("\nFile trovati:")
+    print("\nFile trovati con corrispondenze nel titolo e che sono stati copiati nella cartella di destinazione:")
     for file in file_trovati:
         print(file)
 else:
