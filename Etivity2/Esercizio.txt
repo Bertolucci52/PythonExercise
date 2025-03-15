@@ -1,0 +1,13 @@
+A partire dagli esercizi precedenti
+creare un programma unico, che data una matrice dei dati, 
+apprende la struttura della matrice (i tipi
+delle singole variabili) ed a seconda degli stessi
+propone e implementa delle semplici strategie di analisi. 
+
+L'esercizio non ha uno svolgimento univoco. Lo specifico
+svolgimento è lasciato allo studente, in base a quanto appreso 
+nelle lezioni sul learning supervisionato e sul learning non 
+supervisionato. 
+
+Nella valutazione sarà presa in considerazione anche la chiarezza
+della scrittura del codice ed i commenti al codice stesso.
