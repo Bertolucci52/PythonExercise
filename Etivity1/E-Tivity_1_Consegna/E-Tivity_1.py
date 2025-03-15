@@ -10,7 +10,7 @@ import pandas as pd                    # maneggiare excel e csv
 import os
 import re
 import shutil                          # per spostare i file
-import fnmatch                          # per confrontare i nomi dei file con il pattern
+import fnmatch                         # per confrontare i nomi dei file con il pattern
 
 pattern=(input("Immetti la parola da cercare (PARAM1): "))
 pattern = pattern.strip()
