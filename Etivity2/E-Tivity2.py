@@ -40,6 +40,10 @@ dataFrameGiocatoreDue = pd.DataFrame({
 })
 
 dataFrameAnalisi = pd.concat([dataFrameGiocatoreUno, dataFrameGiocatoreDue], ignore_index=True)
+dataFrameAnalisi['Vittoria'] = dataFrameAnalisi['Vittoria'].map({
+    1: 'Si',
+    0: 'No'
+})
 
 print(dataFrameAnalisi.head())
 
@@ -202,4 +206,62 @@ print("Gradi di libertà: ", dof)
 print("Chi-Quadro: ",chi2)
 
 print("Relazione Significativa: BreakPointVinti -> Vittoria è un arco valido")
+print("_____________________________________________________")
+print("_____________________________________________________")
+
+from pgmpy.models import BayesianNetwork                                    # libreria per la creazione della rete bayesiana (nodi e archi)
+from pgmpy.estimators import MaximumLikelihoodEstimator                     # stima le probabilità dei dati reali (CPT)
+from pgmpy.inference import VariableElimination                             # calcola l'inferenza probabilistica
+
+# 1. Definisco la struttura della rete così come elaborata in precedenza (4 nodi: Aces, Vittoria, BPC e BPW di cui 3 diretti)
+model = BayesianNetwork([
+    ('Aces_Range', 'Vittoria'),                 # 1° relazione diretta Aces -> Vittoria (il numero di ace influenza la probabilità di vincere la partita)
+    ('BPW_Range', 'Vittoria'),                  # 2° relazione diretta BPW  -> Vittoria (i brekpoint che vinco influenzano il risultato finale)
+    ('BPC_Range', 'BPW_Range')                  # 3° relazione diretta BPC  -> BPW (vincere aiuta a vincere, + break creo maggiore è la probabilità di vincerli)
+])
+
+# 2. Creazione del modello
+model.fit(dataFrameAnalisi, estimator=MaximumLikelihoodEstimator)           # definisco le CPT (probabilità condizionata dai geniori + probabilità marginale dei genitori) e maximus...."probabilità più plausibili"
+
+# 3. Creazione inferenza per la distribuzione delle probabilità in funzione della domanda
+infer = VariableElimination(model)
+
+print("Che probabilità hai di vincere una partita di tennis in funzione del tuo servizio, dei Break Point Creati/Vinti?")
+aces = input("In una partita, quanti aces pensi di riuscire a fare? In che range pensi di essere? (Basso [0–14], Medio [15–25], Alto [26–41]): ").capitalize()
+bpc = input("Invece, quanti Break Point riesci a creare? In che range pensi di essere? (Basso [0–3], Medio [4–7], Alto [8–11]): ").capitalize()
+bpw = input("E di questi, quanti ne riesci a vincere? (Basso [meno della metà], Medio [circa la metà], Alto [più della metà]): ").capitalize()
+
+rangeAmmesse={'Basso','Medio','Alto'}
+
+if aces not in rangeAmmesse or bpc not in rangeAmmesse or bpw not in rangeAmmesse:
+    print("Errore: range non valido. Ammessi Basso - Medio - Alto")
+    exit()
+    
+sDomanda="Che probabilità di vincere una partita ho se rientro nei seguenti valori: Aces: {0} - BreakPointCreati: {1} - BreakPointVinti: {2} ?".format(aces,bpc,bpw)
+print("_____________________________________________________")
+print(sDomanda)
+print("_____________________________________________________")
+
+def calcola_prob_vittoria(aces, bpc, bpw):
+    risultato = infer.query(
+        variables=['Vittoria'],
+        evidence={
+            'Aces_Range': aces,
+            'BPC_Range': bpc,
+            'BPW_Range': bpw
+        }
+    )
+    return risultato
+
+print("\nRisultato:")
+print(calcola_prob_vittoria(aces, bpc, bpw))
+risultato = calcola_prob_vittoria(aces, bpc, bpw)
+
+for val, prob in zip(risultato.state_names['Vittoria'], risultato.values):
+    print(f"{val}: {prob*100:.1f}%")
+
+
+
+
+
 
