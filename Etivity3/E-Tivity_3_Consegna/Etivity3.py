@@ -65,5 +65,4 @@ dataAnalisi = dataAnalisi.rename(columns={'name': 'Circuito', 'year': 'Anno','po
 
 print(dataAnalisi[['Circuito','Anno','Scuderia', 'Pilota','Nazionalità','Posizione Finale']].head(10))
 
-# Esportare il DataFrame in un file CSV
-dataAnalisi[['Circuito', 'Anno', 'Scuderia', 'Pilota', 'Nazionalità', 'Posizione Finale']].to_csv('output_f1.csv', index=False)
+#dataAnalisi[['Circuito', 'Anno', 'Scuderia', 'Pilota', 'Nazionalità', 'Posizione Finale']].to_csv('output_f1.csv', index=False)
