@@ -57,15 +57,15 @@ lr = LogisticRegression(C=1000.0, random_state=0)
 lr.fit(X_train_std, y_train)
 
 # visualizzazione grafica della classificazione
-"""
+
 from mlxtend.plotting import plot_decision_regions
+
 plot_decision_regions(X_test_std, y_test, clf=lr, legend=2)
 import matplotlib.pyplot as plt
 plt.xlabel('petal length [standardized]')
 plt.ylabel('petal width [standardized]')
 plt.legend(loc='upper left')
 plt.show()
-"""
 
 clf = lr
 print(clf.score(X_test, y_test))

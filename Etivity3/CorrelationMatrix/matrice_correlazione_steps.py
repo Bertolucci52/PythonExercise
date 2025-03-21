@@ -1,16 +1,17 @@
 # Read file into a Pandas dataframe
+import sys
 from pandas import DataFrame, read_csv
 
 print("Programma di calcolo e visualizzazione matrice di correlazione lineare")
 
 #Leggiamo il file csv e stampiamo le prime 10 righe
-"""
+
 a = input("Inserisci path completo file CSV: ")
 header_si_no = input("La prima riga è l'header(Si/No)?")
 separator = input("Inserisci il separatore:")
 
 #file remoto
-#f = 'https://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data'
+f = 'https://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data'
 
 #inizializzo la lista delle etichette che leggo dal CSV se ci sono oppure le inserisce l'utente
 labels = [];
@@ -23,11 +24,11 @@ if(header_si_no.lower()=='no') :
 
 df=df[0:10]
 print(df)
-"""
+
 
 
 #Leggiamo il file csv e stampiamo le prime 10 righe e il vettore delle etichette
-"""
+
 a = input("Inserisci path completo file CSV: ")
 header_si_no = input("La prima riga è l'header(Si/No)?")
 separator = input("Inserisci il separatore:")
@@ -58,11 +59,11 @@ if(header_flag_ok!=1):
 df=df[0:10]
 print(df)
 print(labels)
-"""
+
 
 #Creare e visualizzare un grafico in cui sull’asse delle X c’è la variabile 
 #Sex e sull’asse delle Y c’è la variabile Rings.
-"""
+
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
@@ -114,13 +115,9 @@ numpy_array = np.array(df)
 x = numpy_array[:,0]
 y = numpy_array[:,8]
 crea_grafico_semplice(x,y)
-"""
-
-
-
 
 #Creare 4 grafici sulla stessa finestra
-"""
+
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
@@ -186,23 +183,9 @@ x = numpy_array[:,0]
 y = numpy_array[:,3]
 crea_grafico_semplice(x,y,224, fig)
 plt.show()
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #Stampare a schermo la MATRICE DI CORRELAZIONE
-"""
+
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
@@ -251,15 +234,6 @@ print(labels)
 print(df)
 
 print(df.corr())
-"""
-
-
-
-
-
-
-
-
 
 #Visualizzare la matrice di correlazione con una mappa termica
 
@@ -343,6 +317,3 @@ print(df)
 
 print(df.corr())
 correlation_matrix(df,labels)
-
-
-

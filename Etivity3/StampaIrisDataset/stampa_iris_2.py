@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import sys
 
 #Questo codice usa la libreria csv per leggere il file
-"""
+
 import csv
 s = set()
 iCounter = 0;
@@ -23,9 +23,6 @@ with open('./iris.csv') as csv_file:
 print(s)
 s = list(s)
 print(s[0])
-"""
-
-
 
 ##axis=1 significa che il taglio e per colonna
 df = pd.read_csv('./iris.csv')

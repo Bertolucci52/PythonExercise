@@ -11,7 +11,7 @@ import sys
 """
 Leggo il csv usando la libreria pandas ma in alcuni da problemi di installazione
 """
-"""
+
 import pandas as pd
 
 df = pd.read_csv('./iris.csv')
@@ -23,10 +23,7 @@ setosa_y = y[:50]
 
 versicolor_x = x[50:100]
 versicolor_y = y[50:100]
-"""
 
-
-"""
 petalLen_x = []
 petalWid_y = []
 
@@ -49,12 +46,12 @@ for line in file:
 plt.figure(figsize=(8,6))
 plt.scatter(petalLen_x,petalWid_y,marker='+',color='green')
 plt.show()
-"""
+
 
 
 
 ## Crea grafico in cui colori in modo diverso la specie
-"""
+
 petalLen_Set = []
 petalLen_Ver = []
 petalLen_Vir = []
@@ -100,14 +97,3 @@ plt.scatter(petalLen_Set,petalWid_Set,marker='+',color='green')
 plt.scatter(petalLen_Vir,petalWid_Vir,marker='x',color='red')
 plt.scatter(petalLen_Ver,petalWid_Ver,marker='*',color='blue')
 plt.show()
-"""
-
-
-"""
-
-
-
-
-
-
-

@@ -32,12 +32,14 @@ def plot_dendrogram(model, **kwargs):
 iris = load_iris()
 X = iris.data
 
-# setting distance_threshold=0 ensures we compute the full tree.
-model = AgglomerativeClustering(distance_threshold=0, n_clusters=None)
-
+# Creazione e addestramento del modello
+model = AgglomerativeClustering(distance_threshold=0, n_clusters=None)                      # distance_threshold=0: costruisce l’intero albero dei cluster senza fermarsi a un numero specifico 
+                                                                                            # n_clusters=None: non fissa il numero di cluster, lascia che il modello costruisca una gerarchia completa
 model = model.fit(X)
 plt.title("Hierarchical Clustering Dendrogram")
+
+
 # plot the top three levels of the dendrogram
-plot_dendrogram(model, truncate_mode="level", p=3)
+plot_dendrogram(model, truncate_mode="level", p=3)                                          # taglia il dendrogramma a 3 livelli
 plt.xlabel("Number of points in node (or index of point if no parenthesis).")
 plt.show()
