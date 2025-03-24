@@ -84,7 +84,7 @@ print(df)
 X = df.drop("Target", axis=1)
 y = df["Target"]
 
-# Attraverso standardscaler vado ad eseguire una media = 0 e deviazione standard = 1 per ogni colonna delle mie feature "X"
+# normalizzazione i dati per ogni colonna delle mie feature "X" --> porto i dati sulla stessa scala per prepararli all'addestramento
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
@@ -259,3 +259,9 @@ while True:
             break
     predici_credito_utente() 
     primo_ciclo = False  
+    
+    
+### Considerazioni Finali:
+# Ho constatato che il dataset scelto è sbilanciato sui buoni creditori e questo a fatto venir meno, almeno in parte, il modello Knn che si basa sui vicini.
+# Per ovviare al problema ho impostato dei parametri bloccanti per "istruire" a monte il programma --> il modello di regressione logistica sarebbe stato più idoneo.
+# Eseguendo testRegr.py si può effettivamente constatare come sia l'accuratezza che il risultato dei cattivi creditori migliori
