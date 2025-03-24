@@ -46,24 +46,24 @@ print(df["Importo richiesto"].describe())
 
 # Status of checking account --> questa variabile verifica l'esistenza o meno di un conto corrente presso il nostro circuito bancario ipotetico, verificandone la giacenza e/o l'accredito dello stipendio
 checking_account_map = {
-    1: "< 0 €",
-    2: "0 <= ... < 200 €",
-    3: ">= 200 € / Accredito dello Stipendio",
+    1: "Conto Corrente Inattivo",
+    2: "Giacenza media: 0 <= ... < 2.000 € senza Accredito dello Stipendio",
+    3: "Giacenza media: >= 2.000 € con Accredito dello Stipendio Attivo",
     4: "Nessun c/c associato"
 }
 
 # Credit history --> situazione storica del contraente
 credit_history_map = {
-    0: "nessun credito preso / tutti i crediti pagati puntualmente",
-    1: "crediti presso questa banca pagati puntualmente",
-    2: "crediti esistenti pagati puntualmente",
-    3: "ritardi nei pagamenti passati",
-    4: "conto critico / altri crediti esistenti"
+    0: "Nessun Debito Vivo - Situazione debitoria pulita",
+    1: "Debiti Vivi contratti con il nostro Istituto di Credito - Pagamenti Regolari",
+    2: "Debiti Vivi contratti con altro Istituto di Credito - Pagamenti Regolari",
+    3: "Debiti Vivi - Pagamenti Irregolari",
+    4: "Debiti Vivi - Conto Corrente Critico - Debiti Vivi accumulati"
 }
 
 # Present employment since --> situazione lavorativa del contraente
 employment_map = {
-    0: "disoccupato",
+    0: "Disoccupato",
     1: "< 1 anno",
     2: "1–4 anni",
     3: "4–7 anni",
@@ -72,10 +72,10 @@ employment_map = {
 
 # Job --> impiego del contraente
 job_map = {
-    0: "disoccupato",
+    0: "Disoccupato",
     1: "Lavoratore a Tempo Determinato - Autonomo",
     2: "Lavoratore a Tempo Indeterminato - Pubblico Impiego",
-    3: "Lavoratore altamente qualificato - Manager - Lavoratore Autonomo"
+    3: "Lavoratore altamente qualificato - Manager"
 }
 
 print(df)
