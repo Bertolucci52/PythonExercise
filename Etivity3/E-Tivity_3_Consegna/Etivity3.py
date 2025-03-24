@@ -127,22 +127,22 @@ def predici_credito_utente():
 
     # Mappature testuali
     checking_account_map = {
-        1: "< 0 €",
-        2: "0 <= ... < 200 €",
-        3: ">= 200 € / Accredito dello Stipendio",
+        1: "Conto Corrente Inattivo",
+        2: "Giacenza media: 0 <= ... < 2.000 € senza Accredito dello Stipendio",
+        3: "Giacenza media: >= 2.000 € con Accredito dello Stipendio Attivo",
         4: "Nessun c/c associato"
     }
 
     credit_history_map = {
-        0: "nessun credito preso / tutti i crediti pagati puntualmente",
-        1: "crediti presso questa banca pagati puntualmente",
-        2: "crediti esistenti pagati puntualmente",
-        3: "ritardi nei pagamenti passati",
-        4: "conto critico / altri crediti esistenti"
+        0: "Nessun Debito Vivo - Situazione debitoria pulita",
+        1: "Debiti Vivi contratti con il nostro Istituto di Credito - Pagamenti Regolari",
+        2: "Debiti Vivi contratti con altro Istituto di Credito - Pagamenti Regolari",
+        3: "Debiti Vivi - Pagamenti Irregolari",
+        4: "Debiti Vivi - Conto Corrente Critico - Debiti Vivi accumulati"
     }
 
     employment_map = {
-        0: "disoccupato",
+        0: "Disoccupato",
         1: "< 1 anno",
         2: "1–4 anni",
         3: "4–7 anni",
@@ -150,7 +150,7 @@ def predici_credito_utente():
     }
 
     job_map = {
-        0: "disoccupato",
+        0: "Disoccupato",
         1: "Lavoratore a Tempo Determinato - Autonomo",
         2: "Lavoratore a Tempo Indeterminato - Pubblico Impiego",
         3: "Lavoratore altamente qualificato - Manager - Lavoratore Autonomo"
@@ -171,22 +171,16 @@ def predici_credito_utente():
             except ValueError:
                 print("Inserisci un numero valido.")
 
-    conto = chiedi_opzione(checking_account_map, "Stato conto corrente:")
-    storico = chiedi_opzione(credit_history_map, "Storico credito:")
-    anni_impiego = chiedi_opzione(employment_map, "Anni di impiego attuale:")
-    lavoro = chiedi_opzione(job_map, "Tipo di lavoro:")
+    conto = chiedi_opzione(checking_account_map, "Stato Conto Corrente:")
+    storico = chiedi_opzione(credit_history_map, "Situazione Debitoria:")
+    lavoro = chiedi_opzione(job_map, "Impiego:")
+    if lavoro !=0:
+        anni_impiego = chiedi_opzione(employment_map, "Da quanti anni:")
+    else:
+        anni_impiego = 0
+        print("Hai indicato 'disoccupato', quindi gli anni di impiego sono stati impostati a 0.")    
 
     # INPUT 
-    while True:
-        try:
-            durata = int(input("Durata del prestito (in mesi): "))
-            if durata > 0:
-                break
-            else:
-                print("Inserisci un numero maggiore di zero.")
-        except ValueError:
-            print("Inserisci un numero valido.")
-
     while True:
         try:
             importo = int(input("Importo richiesto (€): "))
@@ -202,6 +196,16 @@ def predici_credito_utente():
     
     importo_codificato = codifica_importo(importo)
     print("Range di appartenza dell'importo richiesto:", importo_codificato)
+    
+    while True:
+        try:
+            durata = int(input("Durata del prestito (in mesi): "))
+            if durata > 0:
+                break
+            else:
+                print("Inserisci un numero maggiore di zero.")
+        except ValueError:
+            print("Inserisci un numero valido.")
 
     while True:
         try:
