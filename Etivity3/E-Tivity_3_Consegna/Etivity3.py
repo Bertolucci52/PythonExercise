@@ -5,115 +5,247 @@ print("Python - E-Tivity 3")
 print("--------------------------------------------------------")
 
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import classification_report, confusion_matrix
 
-# Carica il dataset
-df = pd.read_csv('./data/german.data', header=None, delim_whitespace=True)
+# Caricamento del dataset numerico
+dataNumeric = pd.read_csv('./data/german.data-numeric', header=None, sep='\s+')
 
-# Verifica la struttura del dataframe (quante colonne ci sono)
-print(df.head())  # Controlla le prime righe del dataframe
-print(df.shape)  # Controlla il numero di colonne
+"""
+print("--------------------------------------------------------")
+print(dataNumeric.head())  # Controlla le prime righe del dataframe
+print(dataNumeric.shape)  # Controlla il numero di colonne
+print("--------------------------------------------------------")
+"""
 
+# dal file word German.doc ho deciso di utilizzare le seguenti variabili: status of checking account, duration in months, credit history, credit amount, present employment since, age in year e job per discriminare il soggetto
 
-# Aggiungi i nomi delle colonne corrispondenti al dataset
-df.columns = [
-    'CheckingAccountStatus', 'Duration', 'CreditHistory', 'Purpose', 'CreditAmount', 
-    'SavingsAccountBonds', 'Employment', 'PersonalStatus', 'OtherParties', 'ResidenceSince',
-    'PropertyMagnitude', 'Age', 'OtherPaymentPlans', 'Housing', 'ExistingCreditsAtThisBank',
-    'Job', 'NumDependents', 'OwnsPhone', 'ForeignWorker', 'Class', 'Target'  # Assicurati che questa lista corrisponda al numero di colonne nel dataset
-]
+# Definizione intestazione colonne --> per variabili scelte --> rinomina
+colonne_descrittive = {
+    0:  "Stato conto corrente",
+    1:  "Durata (mesi)",
+    2:  "Storico credito",
+    4:  "Importo richiesto",
+    6:  "Anni impiego attuale",
+    12: "Età del Contraente",
+    16: "Tipo di lavoro",
+    24: "Target"
+}
 
+dataNumeric = dataNumeric.rename(columns=colonne_descrittive)
+df = dataNumeric[list(colonne_descrittive.values())]
 
-# Verifica la nuova struttura
-print(df.head())  # Controlla di nuovo le prime righe con i nuovi nomi di colonna
+# Mappatura delle variabili
 
+# Status of checking account --> questa variabile verifica l'esistenza o meno di un conto corrente presso il nostro circuito bancario ipotetico, verificandone la giacenza e/o l'accredito dello stipendio
+checking_account_map = {
+    1: "< 0 €",
+    2: "0 <= ... < 200 €",
+    3: ">= 200 € / Accredito dello Stipendio",
+    4: "Nessun c/c associato"
+}
 
-# Codifica le variabili categoriche
-label_encoders = {}
-for column in df.select_dtypes(include=['object']).columns:
-    le = LabelEncoder()
-    df[column] = le.fit_transform(df[column])
-    label_encoders[column] = le
+# Credit history --> situazione storica del contraente
+credit_history_map = {
+    0: "nessun credito preso / tutti i crediti pagati puntualmente",
+    1: "crediti presso questa banca pagati puntualmente",
+    2: "crediti esistenti pagati puntualmente",
+    3: "ritardi nei pagamenti passati",
+    4: "conto critico / altri crediti esistenti"
+}
 
-# Normalizzazione delle variabili numeriche
+# Present employment since --> situazione lavorativa del contraente
+employment_map = {
+    0: "disoccupato",
+    1: "< 1 anno",
+    2: "1–4 anni",
+    3: "4–7 anni",
+    4: ">= 7 anni"
+}
+
+# Job --> impiego del contraente
+job_map = {
+    0: "disoccupato",
+    1: "Lavoratore a Tempo Determinato - Autonomo",
+    2: "Lavoratore a Tempo Indeterminato - Pubblico Impiego",
+    3: "Lavoratore altamente qualificato - Manager - Lavoratore Autonomo"
+}
+
+print(df)
+
+# Separazione tra feature(quello che so) (X) e target (quello che voglio sapere) (y)
+X = df.drop("Target", axis=1)
+y = df["Target"]
+
+# Attraverso standardscaler vado ad eseguire una media = 0 e deviazione standard = 1 per ogni colonna delle mie feature "X"
 scaler = StandardScaler()
-df[['Duration', 'CreditAmount', 'Age']] = scaler.fit_transform(df[['Duration', 'CreditAmount', 'Age']])
+X_scaled = scaler.fit_transform(X)
 
-# Separare le variabili indipendenti (X) e la variabile dipendente (y)
-X = df.drop('Class', axis=1)
-y = df['Class']
+# Suddivisione del dataset (80% per addestrare il modello 20% per testarlo)
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.2, random_state=42
+)
 
-# Suddividere il dataset in train e test (80% train, 20% test)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Addestramento del modello KNN sui dati X e Y ----> TEST 1.1 (segue riga 181) --> ho ridotto a 3 i vicini per evitare la "normalizzazione" dei cattivi creditori
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
 
-# Creare il modello RandomForest
-model = RandomForestClassifier(random_state=42)
-model.fit(X_train, y_train)
+# Predizione sul test set
+y_pred = knn.predict(X_test)
 
-# Valutare il modello
-y_pred = model.predict(X_test)
-print(f"Accuracy: {model.score(X_test, y_test):.2f}")
+# Valutazione
+print("--------------------------------------------------------")
+print("Valutazione del modello KNN (k=3)")
+print("--------------------------------------------------------")
+print("Confusion Matrix:")                                                                          # quanti sono stati etichettati "buoni/cattivi" correttamente --> 120 buoni veri e 21 falsi negativi + 31 falsi positivi e 28 veri cattivi
+print(confusion_matrix(y_test, y_pred))
+print("--------------------------------------------------------")
+print("Classification Report:")
+print(classification_report(y_test, y_pred, target_names=["Buon creditore", "Cattivo creditore"]))  #rapporto buoni/cattivi creditori su 100 unità di veri buoni/cattivi creditori --> accuracy (accuratezza del test) 74% + performante sui buoni creditori che sui cattivi
 
-# Funzione di previsione per nuovi dati
-def predict_credit_risk(model, scaler, label_encoders):
-    # Chiedi i dati all'utente
-    checking_account_status = input(f"Status del conto corrente ({', '.join(label_encoders['CheckingAccountStatus'].classes_)}): ")
-    
-    # Verifica che l'input dell'utente sia valido per 'CheckingAccountStatus'
-    while checking_account_status not in label_encoders['CheckingAccountStatus'].classes_:
-        print(f"Errore: lo status del conto deve essere uno dei seguenti: {', '.join(label_encoders['CheckingAccountStatus'].classes_)}")
-        checking_account_status = input(f"Riprova. Inserisci uno status del conto valido ({', '.join(label_encoders['CheckingAccountStatus'].classes_)}): ")
+# Test 5 - german.data-numeric riporta un range di importi richiesti che non avevo discriminato in precedenza
 
-    duration = float(input("Inserisci la durata del prestito (in mesi): "))
-    credit_amount = float(input("Inserisci l'ammontare del credito: "))
-    age = int(input("Inserisci l'età del richiedente: "))
-    
-    credit_history = input("Storia del credito (A34, A32, A30, ...): ")
-    
-    # Verifica che l'input dell'utente per 'CreditHistory' sia valido
-    while credit_history not in label_encoders['CreditHistory'].classes_:
-        print(f"Errore: la storia del credito deve essere uno dei seguenti: {', '.join(label_encoders['CreditHistory'].classes_)}")
-        credit_history = input(f"Riprova. Inserisci una storia del credito valida ({', '.join(label_encoders['CreditHistory'].classes_)}): ")
-
-    employment = input("Tipo di impiego (A61, A62, A63, ...): ")
-    
-    # Verifica che l'input dell'utente per 'Employment' sia valido
-    while employment not in label_encoders['Employment'].classes_:
-        print(f"Errore: il tipo di impiego deve essere uno dei seguenti: {', '.join(label_encoders['Employment'].classes_)}")
-        employment = input(f"Riprova. Inserisci un tipo di impiego valido ({', '.join(label_encoders['Employment'].classes_)}): ")
-
-    # Pre-elaborazione dei dati inseriti
-    data = pd.DataFrame([[checking_account_status, duration, credit_amount, age, credit_history, employment]], 
-                        columns=['CheckingAccountStatus', 'Duration', 'CreditAmount', 'Age', 'CreditHistory', 'Employment'])
-    
-    # Codifica delle variabili categoriche
-    data['CheckingAccountStatus'] = label_encoders['CheckingAccountStatus'].transform(data['CheckingAccountStatus'])
-    data['CreditHistory'] = label_encoders['CreditHistory'].transform(data['CreditHistory'])
-    data['Employment'] = label_encoders['Employment'].transform([employment])[0]
-    
-    # Normalizzazione dei dati
-    data[['Duration', 'CreditAmount', 'Age']] = scaler.transform(data[['Duration', 'CreditAmount', 'Age']])
-    
-    # Aggiungi le colonne mancanti con valori predefiniti (o nulli)
-    for column in df.columns:
-        if column not in data.columns:
-            data[column] = 0  # Aggiungi un valore predefinito per le colonne mancanti
-    
-    # Previsione con il modello addestrato
-    prediction = model.predict(data)
-    
-    # Mostrare il risultato
-    if prediction == 1:
-        print("Il prestito è a rischio.")
+def codifica_importo(importo):
+    if importo <= 2000:
+        return 1
+    elif importo <= 5000:
+        return 2
+    elif importo <= 10000:
+        return 3
     else:
-        print("Il prestito è sicuro.")
-
-# Chiamare la funzione per fare una previsione
-predict_credit_risk(model, scaler, label_encoders)
+        return 4
 
 
-# Chiamare la funzione per fare una previsione
-predict_credit_risk(model, scaler, label_encoders)
+def predici_credito_utente():
+    print("\n Inserisci i dati del cliente per valutare la richiesta di prestito:\n")
+
+    # Mappature testuali
+    checking_account_map = {
+        1: "< 0 €",
+        2: "0 <= ... < 200 €",
+        3: ">= 200 € / Accredito dello Stipendio",
+        4: "Nessun c/c associato"
+    }
+
+    credit_history_map = {
+        0: "nessun credito preso / tutti i crediti pagati puntualmente",
+        1: "crediti presso questa banca pagati puntualmente",
+        2: "crediti esistenti pagati puntualmente",
+        3: "ritardi nei pagamenti passati",
+        4: "conto critico / altri crediti esistenti"
+    }
+
+    employment_map = {
+        0: "disoccupato",
+        1: "< 1 anno",
+        2: "1–4 anni",
+        3: "4–7 anni",
+        4: ">= 7 anni"
+    }
+
+    job_map = {
+        0: "disoccupato",
+        1: "Lavoratore a Tempo Determinato - Autonomo",
+        2: "Lavoratore a Tempo Indeterminato - Pubblico Impiego",
+        3: "Lavoratore altamente qualificato - Manager - Lavoratore Autonomo"
+    }
+
+    
+    def chiedi_opzione(mappa, testo):
+        while True:
+            print(testo)
+            for k, v in mappa.items():
+                print(f"  {k}: {v}")
+            try:
+                scelta = int(input("   → Inserisci il numero corrispondente: "))
+                if scelta in mappa:
+                    return scelta
+                else:
+                    print("Valore non valido. Riprova.")
+            except ValueError:
+                print("Inserisci un numero valido.")
+
+    conto = chiedi_opzione(checking_account_map, "Stato conto corrente:")
+    storico = chiedi_opzione(credit_history_map, "Storico credito:")
+    anni_impiego = chiedi_opzione(employment_map, "Anni di impiego attuale:")
+    lavoro = chiedi_opzione(job_map, "Tipo di lavoro:")
+
+    # INPUT 
+    while True:
+        try:
+            durata = int(input("Durata del prestito (in mesi): "))
+            if durata > 0:
+                break
+            else:
+                print("Inserisci un numero maggiore di zero.")
+        except ValueError:
+            print("Inserisci un numero valido.")
+
+    while True:
+        try:
+            importo = int(input("Importo richiesto (€): "))
+            if importo > 0:
+                break
+            else:
+                print("Inserisci un importo maggiore di zero.")
+        except ValueError:
+            print(" Inserisci un numero valido.")
+    
+    importo_codificato = codifica_importo(importo)
+    print("Range di appartenza dell'importo richiesto:", importo_codificato)
+
+    while True:
+        try:
+            eta = int(input("Età del cliente: "))
+            if eta > 0:
+                break
+            else:
+                print("Inserisci un'età valida.")
+        except ValueError:
+            print("Inserisci un numero valido.")
+    
+    # Test 6 --> Visto che il dataset non mi riporta un alto numero di cattivi creditori (così da istruire correttamente la macchina), ho forzato questa condizione "estrema" per far uscire un cattivo creditore
+    
+    if importo > 100000 or (conto == 1 and storico == 4 and lavoro == 0):   
+        print("\nProfilo ad Alto Rischio.")
+        print("Prestito sconsigliato. Il sistema ha bloccato la richiesta a prescindere dal modello.")
+        return
+
+    input_utente = [[conto, durata, storico, importo_codificato, anni_impiego, eta, lavoro]]
+    input_df = pd.DataFrame(input_utente, columns=X.columns)
+    input_scalato = scaler.transform(input_df)
+
+    prediction = knn.predict(input_scalato)[0]
+    proba = knn.predict_proba(input_scalato)[0]
+
+# Test 1 - Ho riscontrato che il mio dataset è composto maggiormente da buoni creditori e questo va ad influenzare il KNN per vicinanza anche per un evidente cattivo creditore. --> provo abbassando il k a 3 vicini
+# Test 2 - Riducendo il k la risultante è più "coerente" con la realtà anche se variabili estreme non sempre portano ad un valore veritiero
+# Test 3 - Il primo attributo (stato del conto corrente) influenza enormemente il risultato finale --> in particolar modo il valore 4 (nessun conto corrente) assume quasi un valore "neutro" portando di default a fidarsi.
+# Test 3.1 - Anche la durata va ad influire tanto sul risultato finale
+# Test 4 - Avendo scelto poche variabili dal dataset originale pure se metto dati "logicamente" negativi il test si affida ai vicini simili (che possono essere buoni) --> segue riga 215
+
+    print(f"\nProbabilità → Buon creditore: {proba[0]:.2f} | Cattivo creditore: {proba[1]:.2f}")
+    print("\nRisultato della valutazione:")
+    if prediction == 1:
+        print("Il cliente è un buon creditore.")
+    else:
+        print("Il cliente è un cattivo creditore.")
+    
+    # Test 4.1 --> verifica dei vicini
+    print("___________________________________")
+    distanze, indici = knn.kneighbors(input_scalato)
+    vicini = df.iloc[indici[0]]
+    vicini = vicini.copy()
+    vicini["Distanza"] = distanze[0]
+    print("\nValori vicini nel dataset:")
+    print(vicini)
+    print("___________________________________")        
+
+while True:
+    comando = input("\n Vuoi valutare un nuovo cliente? (Digita 'exit' per uscire - altrimenti premi 'invio'): ").strip().lower()
+    if comando == "exit":
+        print("Uscita dal programma!")
+        break
+    predici_credito_utente()   
