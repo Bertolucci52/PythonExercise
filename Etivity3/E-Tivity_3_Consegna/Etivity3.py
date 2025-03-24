@@ -29,13 +29,18 @@ colonne_descrittive = {
     2:  "Storico credito",
     4:  "Importo richiesto",
     6:  "Anni impiego attuale",
-    12: "Età del Contraente",
+    9: "Età del Contraente",
     16: "Tipo di lavoro",
     24: "Target"
 }
 
 dataNumeric = dataNumeric.rename(columns=colonne_descrittive)
 df = dataNumeric[list(colonne_descrittive.values())]
+
+"""
+print(df["Età del Contraente"].describe())
+print(df["Importo richiesto"].describe())
+"""
 
 # Mappatura delle variabili
 
@@ -92,7 +97,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(X_train, y_train)
 
-# Predizione sul test set
 y_pred = knn.predict(X_test)
 
 # Valutazione
@@ -108,18 +112,18 @@ print(classification_report(y_test, y_pred, target_names=["Buon creditore", "Cat
 # Test 5 - german.data-numeric riporta un range di importi richiesti che non avevo discriminato in precedenza
 
 def codifica_importo(importo):
-    if importo <= 2000:
+    if importo <= 5000:
         return 1
-    elif importo <= 5000:
-        return 2
     elif importo <= 10000:
+        return 2
+    elif importo <= 20000:
         return 3
     else:
         return 4
 
 
 def predici_credito_utente():
-    print("\n Inserisci i dati del cliente per valutare la richiesta di prestito:\n")
+    print("\n Inserisci i dati del cliente per valutare la richiesta di prestito [0-20.000]:\n")
 
     # Mappature testuali
     checking_account_map = {
@@ -186,12 +190,15 @@ def predici_credito_utente():
     while True:
         try:
             importo = int(input("Importo richiesto (€): "))
-            if importo > 0:
-                break
-            else:
+            if importo <= 0:
                 print("Inserisci un importo maggiore di zero.")
+            elif importo > 20000:
+                print("È possibile richiedere un finanziamento massimo di € 20.000.")
+            else:  
+                print(f"Importo accettato: € {importo}")              
+                break                
         except ValueError:
-            print(" Inserisci un numero valido.")
+            print("Inserisci un numero valido.")
     
     importo_codificato = codifica_importo(importo)
     print("Range di appartenza dell'importo richiesto:", importo_codificato)
@@ -208,8 +215,8 @@ def predici_credito_utente():
     
     # Test 6 --> Visto che il dataset non mi riporta un alto numero di cattivi creditori (così da istruire correttamente la macchina), ho forzato questa condizione "estrema" per far uscire un cattivo creditore
     
-    if importo > 100000 or (conto == 1 and storico == 4 and lavoro == 0):   
-        print("\nProfilo ad Alto Rischio.")
+    if importo > 20000 or (conto == 1 and storico == 4 and lavoro == 0):   
+        print("\n Profilo ad Alto Rischio.")
         print("Prestito sconsigliato. Il sistema ha bloccato la richiesta a prescindere dal modello.")
         return
 
@@ -243,9 +250,12 @@ def predici_credito_utente():
     print(vicini)
     print("___________________________________")        
 
+primo_ciclo = True
 while True:
-    comando = input("\n Vuoi valutare un nuovo cliente? (Digita 'exit' per uscire - altrimenti premi 'invio'): ").strip().lower()
-    if comando == "exit":
-        print("Uscita dal programma!")
-        break
-    predici_credito_utente()   
+    if not primo_ciclo:
+        comando = input("\n Vuoi valutare un nuovo cliente? (Digita 'exit' per uscire - altrimenti premi 'invio' per continuare): ").strip().lower()
+        if comando == "exit":
+            print("Uscita dal programma!")
+            break
+    predici_credito_utente() 
+    primo_ciclo = False  
