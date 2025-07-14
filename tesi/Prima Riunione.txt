@@ -1,0 +1,31 @@
+📌 Richieste specifiche del professore
+1. Entropia di Shannon
+Usare l’entropia come misura della prevedibilità di un comportamento finanziario.
+
+Es. Se ogni mese paghi 30K per il personale, l’entropia è bassa → evento stabile.
+
+Se un mese il valore cambia in modo anomalo (es. 28K), va segnalato.
+
+2. Anomalie = rottura di regolarità
+L’anomalia è un evento non spiegabile da pattern noti.
+
+Se non riesci a “togliere la causalità” (cioè a spiegare il valore con altri fattori), è un’anomalia vera.
+
+3. Uso di variabili condizionanti
+Verificare se vincoli secondari (es. numero dipendenti, giorni lavorativi, festività) spiegano la variazione.
+
+Se non ci riesci, l’evento è casuale e quindi anormale.
+
+4. Modello logico di ragionamento causale
+“Se sono random, devo sconfiggere la causalità con delle condizioni. Se sconfiggo la causalità, trovo l’anomalia.”
+
+Tradotto: più riesci a spiegare il comportamento tramite condizioni note, meno probabile è che sia anomalo. L’anomalia vera è quella che rimane inspiegata.
+
+🧪 In pratica: cosa dobbiamo fare con il dataset
+✅ Calcolare l’entropia per ogni categoria/voce/capitolo nel tempo
+
+✅ Rilevare deviazioni significative rispetto al comportamento atteso
+
+✅ Verificare condizioni esterne o vincoli (es. se un’uscita minore corrisponde a meno dipendenti attivi)
+
+✅ Marcare come anomalia ciò che non può essere spiegato

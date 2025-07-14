@@ -1,0 +1,18 @@
+🧠 2. Entropia del saldo per categoria – commento interpretativo
+Categoria	Entropia Saldo	Interpretazione
+Reparti Operativi	6.2418	🔴 Estrema variabilità nel saldo
+Amministrazione	6.2294	🔴 Anche qui comportamento altalenante
+Finanziamenti	5.1063	🟠 Variabile, ma meno critica
+Nessuna	0.8113	🟢 Quasi stabile → probabilmente marginale
+Logistica	0.7766	🟢 Comportamento molto stabile
+
+✅ Conclusioni finali su questo blocco
+Reparti Operativi e Amministrazione:
+🔥 Hanno saldo mensile altamente variabile → quindi non solo entrate/uscite instabili, ma anche gestione finanziaria sbilanciata
+→ Anomalia strutturale
+
+Finanziamenti:
+📉 Più contenuta l’instabilità, ma comunque degna di attenzione → potrebbe esserci discrepanza tra concessione e rimborso
+
+Logistica:
+✅ Stabile → comportamento economico prevedibile → nessun segnale d’allarme

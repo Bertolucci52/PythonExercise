@@ -1,0 +1,29 @@
+📊 Analisi finale dei risultati
+🔵 Entrate pure – per categoria
+Categoria	Entropia
+Reparti Operativi	6.9627
+Finanziamenti	4.6558
+
+📌 Entrambe le categorie mostrano variabilità, ma quella dei Reparti è molto più instabile
+
+🔍 Entrate pure – per dettaglio
+Categoria	Dettaglio	Entropia
+Finanziamenti	Conferimento quota capitale	4.56
+Finanziamenti	Prestito bancario	0.70
+Reparti Operativi	Hardware	6.95
+Reparti Operativi	Software	6.95
+
+📌 La variabilità di Reparti Operativi è dovuta interamente ai suoi dettagli (non spiegabile = anomalia)
+📌 I Finanziamenti invece sono composti da una parte stabile (prestito) e una instabile (conferimenti)
+
+🟠 Entrate da passaggi fondi (interne)
+Categoria	Entropia
+Amministrazione	4.7312
+Reparti Operativi	3.8841
+Logistica	0.0000
+
+📌 Queste ci dicono quanto le singole strutture dipendano in modo variabile dai fondi interni
+
+Amministrazione: riceve fondi in modo irregolare
+
+Logistica: sempre uguale → comportamento prevedibile

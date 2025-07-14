@@ -1,0 +1,41 @@
+✅ Riepilogo risultati
+Categoria	Entropia Categoria	Dettagli più rilevanti	Entropia Dettaglio
+Amministrazione	6.9640	Stipendi, Bonus Lavoratore	0.0000
+Reparti Operativi	6.9594	Software, Hardware	~6.95
+Finanziamenti	6.2770	Prestito bancario	6.2770
+Logistica	0.0000	Beni immobili	0.0000
+
+🧠 Analisi critica
+🔹 Amministrazione
+Entropia della categoria: alta
+
+Entropia dei dettagli: zero
+
+🟨 Interpretazione: il comportamento è costante, ma diviso su due voci.
+L’entropia alta della categoria è solo un artefatto di aggregazione.
+👉 L'entropia è spiegabile → non è una vera anomalia.
+
+🔹 Reparti Operativi
+Entropia della categoria: alta
+
+Entropia dei dettagli: altissima
+
+🟥 Interpretazione: l’instabilità non è spiegabile dai dettagli.
+Ogni sottocategoria è a sua volta altamente variabile.
+👉 Candidata anomalia reale
+
+🔹 Finanziamenti
+Sia la categoria che il dettaglio hanno la stessa entropia
+
+🟧 Interpretazione: una voce singola è responsabile del caos → entropia confermata
+
+🔹 Logistica
+Tutto è stabile → entropia 0 ovunque
+👉 ✅ Nessun problema, categoria prevedibile
+
+✅ Cosa significa ai fini della tesi?
+Hai appena dimostrato, con metodo:
+
+👉 “L’entropia di una categoria può essere spiegata o no dal comportamento dei dettagli. Solo se non è spiegabile, parliamo di vera anomalia.”
+
+Ed è esattamente ciò che il professore intendeva per “sconfiggere la causalità”.
