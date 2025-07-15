@@ -20,10 +20,9 @@ riepilogo = df_uscite.groupby(["Mese", "CashFlow - Categoria"])["Importo"].sum()
 # Lista di tutte le categorie presenti
 categorie = riepilogo["CashFlow - Categoria"].unique()
 
-# Lista per salvare i risultati
+
 risultati = []
 
-# Ciclo su ogni categoria
 for categoria in categorie:
     dati_cat = riepilogo[riepilogo["CashFlow - Categoria"] == categoria]
     valori = dati_cat["Importo"].abs().values
@@ -40,10 +39,8 @@ for categoria in categorie:
         "Entropia": round(entropia, 4)
     })
 
-# Creiamo un DataFrame dei risultati ordinato
 df_entropie = pd.DataFrame(risultati).sort_values(by="Entropia", ascending=False)
 
-# Mostra le prime righe
 print(df_entropie.head(10))
 print("--------------------------------------------------------------")
 
@@ -53,50 +50,31 @@ print("--------------------------------------------------------------")
 ## In questa sezione si misura la variabilità delle uscite mensili per ogni macro-categoria contabile.
 ## L'obiettivo è identificare quali categorie mostrano un comportamento regolare e prevedibile nel tempo
 ## (entropia bassa), e quali invece risultano fortemente variabili o caotiche (entropia alta).
-##
 ## L'entropia viene calcolata sulla distribuzione mensile degli importi (valori assoluti), 
 ## e il risultato è espresso in bit (log base 2), secondo la definizione classica di Shannon.
-##
 ## Le categorie con entropia elevata sono potenzialmente soggette ad anomalie, 
 ## ma è necessario proseguire l'analisi verificando se tale variabilità può essere spiegata 
-## da variabili secondarie (es. dettagli, risorse, annotazioni). 
+## da variabili secondarie (es. dettagli). 
 ## In caso contrario, si considerano candidati anomalie effettive.
 ##
 ## Risultati ottenuti:
-## - Amministrazione: entropia 6.9640 bit → comportamento altamente variabile
+## - Amministrazione: entropia 6.9261 bit → comportamento altamente variabile
 ## - Reparti Operativi: entropia 6.9594 bit → comportamento altamente variabile
 ## - Finanziamenti: entropia 6.2770 bit → variabilità significativa
-## - Logistica: entropia 0.0000 bit → comportamento perfettamente stabile
-##
-## Le prime tre categorie sono quindi buone candidate per un'analisi approfondita.
-## In particolare, si verificherà se la loro variabilità è giustificata da altre informazioni disponibili,
+## - Logistica: entropia 1.5621 bit → comportamento stabile con lieve variabilità
+## Si verificherà ora se la loro variabilità è giustificata da altre informazioni disponibili,
 ## come le sotto-categorie (CashFlow - Dettaglio), così da “spiegare” l'entropia o confermare la presenza di anomalie.
 ##
 
 # ----------------------------------------------------------------------------------
 
-##
-## Calcolo dell'entropia di Shannon per ciascun dettaglio associato alle categorie
-##
-## Dopo aver identificato le categorie con elevata variabilità nelle uscite mensili,
-## si analizzano i rispettivi dettagli (CashFlow - Dettaglio) per verificare se tale variabilità
-## può essere spiegata da un comportamento specifico dei sotto-elementi.
-## In particolare, si misura l'entropia dei flussi mensili per ogni dettaglio,
-## raggruppato per categoria di appartenenza. Se uno o più dettagli risultano molto variabili,
-## è possibile che essi siano i responsabili dell'entropia complessiva della categoria.
-## Al contrario, se tutti i dettagli mostrano un comportamento stabile,
-## l'entropia della categoria potrebbe essere sintomo di una cattiva classificazione o di errori.
-##
-
-# Lista per salvare i risultati dei dettagli
 risultati_dettagli = []
 
-# Ciclo su ogni categoria
+
 for categoria in categorie:
     df_cat = df_uscite[df_uscite["CashFlow - Categoria"] == categoria].copy()
     df_cat["Mese"] = df_cat["Data Movimento"].dt.to_period("M")
-
-    # Raggruppa per mese e dettaglio
+    
     riepilogo_dett = df_cat.groupby(["Mese", "CashFlow - Dettaglio"])["Importo"].sum().reset_index()
     
     # Trova tutti i dettagli unici per questa categoria
@@ -122,7 +100,7 @@ for categoria in categorie:
             "Entropia": round(entropia_val, 4)
         })
 
-# Convertiamo i risultati in DataFrame
+
 df_entropie_dettagli = pd.DataFrame(risultati_dettagli).sort_values(by=["Categoria", "Entropia"], ascending=[True, False])
 
 # Mostra i primi risultati

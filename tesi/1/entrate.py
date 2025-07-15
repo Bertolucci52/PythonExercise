@@ -1,3 +1,22 @@
+##
+## Calcolo dell'entropia di Shannon per le entrate del Cash Flow
+##
+## In questa sezione si analizza la variabilità delle entrate mensili, distinguendo tra:
+## - Entrate "pure": movimenti positivi con Passaggio Fondi = No (es. finanziamenti, contributi, incassi esterni)
+## - Entrate "interne": trasferimenti tra conti, ovvero movimenti positivi con Passaggio Fondi = Sì
+## L'obiettivo è misurare, per ogni categoria e dettaglio, la stabilità dei flussi in ingresso nel tempo.
+##
+## Risultati principali (entrate pure):
+## - Reparti Operativi → entropia 6.9627 bit → comportamento altamente variabile - forte isntabilità anche sul lato delle entrate
+## - Finanziamenti → entropia 4.6558 bit → comportamento moderatamente variabile - più regolari ma non del tutto prevedibili
+##
+## Risultati (entrate da trasferimenti interni):
+## - Viene calcolata l'entropia solo per le categorie ≠ "Finanziamenti", che ricevono fondi tramite Passaggio Fondi = Sì
+## - Questo consente di osservare il comportamento delle strutture nel richiedere/gestire fondi interni
+## Questo doppio livello di analisi permette di distinguere tra instabilità reale (entrate esterne) e instabilità interna,
+## evidenziando potenziali squilibri o anomalie nella gestione delle risorse.
+
+
 import pandas as pd
 from scipy.stats import entropy
 import numpy as np
@@ -12,9 +31,6 @@ df_entrate = df[(df["Importo"] > 0) & (df["Passaggio Fondi"] == "No")]
 # print(df_entrate[["Data Movimento", "Importo", "Passaggio Fondi"]].head())
 df_entrate["Mese"] = df_entrate["Data Movimento"].dt.to_period("M")
 riepilogo = df_entrate.groupby(["Mese", "CashFlow - Categoria"])["Importo"].sum().reset_index()
-
-# print(riepilogo.head(10))
-# print("--------------------------------------------------------------")
 
 # Calcolo entropia di Shannon per le entrate vere (per categoria)
 categorie = riepilogo["CashFlow - Categoria"].unique()
@@ -84,13 +100,6 @@ df_entropie_dettagli_entrate = pd.DataFrame(risultati_dettagli_entrate).sort_val
 print("\nEntropia per ogni dettaglio (entrate pure):")
 print(df_entropie_dettagli_entrate.head(10))
 
-##
-## Entropia delle entrate interne (trasferimenti tra conti)
-##
-## Qui consideriamo solo le righe con Importo > 0 e Passaggio Fondi = "Sì"
-## e categoria diversa da "Finanziamenti", perché si tratta di trasferimenti interni
-##
-
 df_trasferimenti = df[(df["Importo"] > 0) & (df["Passaggio Fondi"] == "Si") & (df["CashFlow - Categoria"] != "Finanziamenti")].copy()
 df_trasferimenti["Mese"] = df_trasferimenti["Data Movimento"].dt.to_period("M")
 
@@ -123,47 +132,6 @@ if risultati_trasf:
     print(df_entropie_trasferimenti.head(10))
 else:
     print("\n⚠️ Nessuna categoria ha ricevuto entrate da passaggi fondi (interne).")
-
-
-print("\nEntropia delle entrate da passaggi fondi (interne):")
-print(df_entropie_trasferimenti.head(10))
-
-##
-## Calcolo dell'entropia di Shannon per le entrate del Cash Flow
-##
-## In questa sezione si analizza la variabilità delle entrate mensili, distinguendo tra:
-## - Entrate "pure": movimenti positivi con Passaggio Fondi = No (es. finanziamenti, contributi, incassi esterni)
-## - Entrate "interne": trasferimenti tra conti, ovvero movimenti positivi con Passaggio Fondi = Sì
-##
-## L'obiettivo è misurare, per ogni categoria e dettaglio, la stabilità dei flussi in ingresso nel tempo.
-## L'entropia viene calcolata sulla distribuzione mensile degli importi (valori assoluti), ed è espressa in bit.
-##
-## Risultati principali (entrate pure):
-## - Reparti Operativi → entropia 6.9627 bit → comportamento altamente variabile
-## - Finanziamenti → entropia 4.6558 bit → comportamento moderatamente variabile
-##
-## Interpretazione:
-## - La categoria "Reparti Operativi" mostra una forte instabilità anche sul lato delle entrate,
-##   confermando il comportamento caotico osservato nelle uscite.
-## - "Finanziamenti" ha entrate più regolari, ma non del tutto prevedibili, indicando una possibile gestione a tranche.
-##
-## Risultati per dettaglio (entrate pure):
-## - Da analizzare i singoli sottodettagli delle entrate pure per verificare se la variabilità è attribuibile a un solo componente
-##
-## Risultati (entrate da trasferimenti interni):
-## - Viene calcolata l'entropia solo per le categorie ≠ "Finanziamenti", che ricevono fondi tramite Passaggio Fondi = Sì
-## - Questo consente di osservare il comportamento delle strutture nel richiedere/gestire fondi interni
-##
-## Questo doppio livello di analisi permette di distinguere tra instabilità reale (entrate esterne) e instabilità interna,
-## evidenziando potenziali squilibri o anomalie nella gestione delle risorse.
-##
-
-##
-## Entropia dei trasferimenti interni per ciascun dettaglio
-##
-## Dopo aver analizzato le categorie che ricevono fondi interni (Passaggio Fondi = "Sì"),
-## questo blocco calcola l'entropia per ogni dettaglio associato a tali movimenti.
-##
 
 riepilogo_dett_trasf = df_trasferimenti.groupby(
     ["Mese", "CashFlow - Categoria", "CashFlow - Dettaglio"]

@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import entropy
 import numpy as np
 
-# definizione uscite per categorie
+
 
 df = pd.read_csv("../1_entropiaShannon/registro_cassa.csv", sep=";", encoding="ISO-8859-1")
 df["Importo"] = df["Importo"].str.replace(",", ".").astype(float).round(2)
@@ -20,21 +20,18 @@ df_stipendi = df_uscite[
     (df_uscite["CashFlow - Dettaglio"] == "Stipendi")
 ].copy()
 
-# Riepilogo per mese: numero di movimenti + totale uscite
+
 riepilogo_stipendi = df_stipendi.groupby("Mese").agg(
     Numero_Movimenti=("Importo", "count"),
     Totale_Uscite=("Importo", "sum")
 ).reset_index()
 
-# 1. Crea tutti i mesi compresi tra min e max
 tutti_i_mesi = pd.DataFrame({
     "Mese": pd.period_range(df["Data Movimento"].min(), df["Data Movimento"].max(), freq="M")
 })
 
-# 2. Unisci con il riepilogo originale
-riepilogo_stipendi = tutti_i_mesi.merge(riepilogo_stipendi, on="Mese", how="left")
 
-# 3. Riempie i NaN con 0
+riepilogo_stipendi = tutti_i_mesi.merge(riepilogo_stipendi, on="Mese", how="left")
 riepilogo_stipendi["Numero_Movimenti"] = riepilogo_stipendi["Numero_Movimenti"].fillna(0).astype(int)
 riepilogo_stipendi["Totale_Uscite"] = riepilogo_stipendi["Totale_Uscite"].fillna(0.0).round(2)
 
@@ -52,20 +49,15 @@ def classifica_riga(row):
     else:
         return "?"
 
-# Applica la classificazione
 riepilogo_stipendi["Classificazione"] = riepilogo_stipendi.apply(classifica_riga, axis=1)
-
-# Mostra il risultato
 print("Riepilogo stipendi per mese con classificazione:")
 print(riepilogo_stipendi)
 
-# Filtra solo i casi anomali (non "✅ Normale")
 anomalie_stipendi = riepilogo_stipendi[riepilogo_stipendi["Classificazione"] != "✅ Normale"]
 
 print("Mesi con comportamento anomalo nei movimenti 'Stipendi':")
 print(anomalie_stipendi)
 
-# Statistiche rapide
 print("\nTotale mesi analizzati:", len(riepilogo_stipendi))
 print("Mesi normali:", (riepilogo_stipendi["Classificazione"] == "✅ Normale").sum())
 print("Mesi con anomalie:", len(anomalie_stipendi))
