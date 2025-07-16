@@ -60,7 +60,7 @@ def verifica_condizioni(df, categoria, dettaglio, condizioni):
     return risultati
 
 
-df = pd.read_csv("../1/registro_cassa.csv", sep=";", encoding="ISO-8859-1")
+df = pd.read_csv("../dataset/registro_cassa.csv", sep=";", encoding="ISO-8859-1")
 df["Importo"] = df["Importo"].str.replace(",", ".").astype(float).round(2)
 df["Data Movimento"] = pd.to_datetime(df["Data Movimento"], format="%d/%m/%Y")
 df["Mese"] = df["Data Movimento"].dt.to_period("M")
