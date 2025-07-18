@@ -25,37 +25,37 @@ def verifica_condizioni(df, categoria, dettaglio, condizioni):
         mov_mese = df_filtro[df_filtro["Importo"] < 0].groupby("Mese").size()
         violazioni = mov_mese[mov_mese > condizioni["numero_movimenti_mensili_max"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Troppe uscite mensili: {violazioni.to_dict()}")
+            risultati.append(f"Troppe uscite mensili: {violazioni.to_dict()}")
 
     if "numero_movimenti_mensili_entrate_max" in condizioni:
         mov_mese = df_filtro[(df_filtro["Importo"] > 0) & (df_filtro["Passaggio Fondi"] == "Si")].groupby("Mese").size()
         violazioni = mov_mese[mov_mese > condizioni["numero_movimenti_mensili_entrate_max"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Troppe entrate mensili PF: {violazioni.to_dict()}")
+            risultati.append(f"Troppe entrate mensili PF: {violazioni.to_dict()}")
 
     if "totale_uscite_attese" in condizioni:
         uscite_mese = df_filtro[df_filtro["Importo"] < 0].groupby("Mese")["Importo"].sum()
         violazioni = uscite_mese[round(uscite_mese, 2) != condizioni["totale_uscite_attese"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Uscite mensili anomale: {violazioni.to_dict()}")
+            risultati.append(f"Uscite mensili anomale: {violazioni.to_dict()}")
 
     if "totale_entrate_annue_pf" in condizioni:
         entrate_anno = df_filtro[(df_filtro["Importo"] > 0) & (df_filtro["Passaggio Fondi"] == "Si")].groupby("Anno")["Importo"].sum()
         violazioni = entrate_anno[round(entrate_anno, 2) != condizioni["totale_entrate_annue_pf"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Entrate annuali PF anomale: {violazioni.to_dict()} - Gli stipendi hanno richiesto movimentazioni di risorse straordinarie")
+            risultati.append(f"Entrate annuali PF anomale: {violazioni.to_dict()} - Gli stipendi hanno richiesto movimentazioni di risorse straordinarie")
 
     if "movimenti_annui_entrate_max" in condizioni:
         entrate_anno = df_filtro[df_filtro["Importo"] > 0].groupby("Anno").size()
         violazioni = entrate_anno[entrate_anno > condizioni["movimenti_annui_entrate_max"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Troppe entrate annue: {violazioni.to_dict()} - Sono stati richiesti conferimenti di capitale straordinario")
+            risultati.append(f"Troppe entrate annue: {violazioni.to_dict()} - Sono stati richiesti conferimenti di capitale straordinario")
 
     if "soglia_massima_mensile" in condizioni:
         uscite_mese = df_filtro[df_filtro["Importo"] < 0].groupby("Mese")["Importo"].sum()
         violazioni = uscite_mese[uscite_mese < condizioni["soglia_massima_mensile"]]
         if not violazioni.empty:
-            risultati.append(f"❌ Superata soglia mensile: {violazioni.to_dict()}")
+            risultati.append(f"Superata soglia mensile: {violazioni.to_dict()}")
 
     return risultati
 
@@ -98,22 +98,20 @@ print(df_entropie_saldo_dettagli.head(10))
 # Entrate pure
 df_entrate_pure = df[(df["Importo"] > 0) & (df["Passaggio Fondi"] == "No")]
 
-# Entrate da trasferimenti interni
+# Entrate da passaggio fondi
 df_entrate_trasf = df[(df["Importo"] > 0) &
                       (df["Passaggio Fondi"] == "Si") &
                       (df["CashFlow - Categoria"] != "Finanziamenti")]
 
 # Uscite
 df_uscite = df[(df["Importo"] < 0) & (df["Passaggio Fondi"] == "No")]
-
-# Risultati
 risultati_entrate_uscite = []
 
 for _, riga in dettagli_saldi.iterrows():
     categoria = riga["CashFlow - Categoria"]
     dettaglio = riga["CashFlow - Dettaglio"]
 
-    # Entrate pure
+    # Entrate 
     subset_pure = df_entrate_pure[
         (df_entrate_pure["CashFlow - Categoria"] == categoria) &
         (df_entrate_pure["CashFlow - Dettaglio"] == dettaglio)
@@ -128,7 +126,7 @@ for _, riga in dettagli_saldi.iterrows():
             "Entropia": round(entropia_pure, 4)
         })
 
-    # Entrate trasferimenti
+    # Entrate passaggio fondi
     subset_trasf = df_entrate_trasf[
         (df_entrate_trasf["CashFlow - Categoria"] == categoria) &
         (df_entrate_trasf["CashFlow - Dettaglio"] == dettaglio)
@@ -158,7 +156,6 @@ for _, riga in dettagli_saldi.iterrows():
             "Entropia": round(entropia_uscita, 4)
         })
 
-# Ordina e salva il DataFrame
 df_entropie_entrate_uscite = pd.DataFrame(risultati_entrate_uscite).sort_values(
     by=["Categoria", "Dettaglio", "Tipo"]
 )
@@ -170,9 +167,8 @@ print(df_entropie_entrate_uscite.head(50))
 soglia_entropia = 2.3
 df_entropie_filtrate = df_entropie_entrate_uscite[df_entropie_entrate_uscite["Entropia"] > soglia_entropia]
 
-# Visualizza
 print("--------------------------------------------------------------------------")
-print("\n\U0001f4a1 Dettagli con entropia significativa (> 2.3):")
+print("\nDettagli con entropia significativa (> 2.3):")
 print(df_entropie_filtrate)
 
 condizioni_where = {    
@@ -197,7 +193,6 @@ condizioni_where = {
     }
 }
 
-# Iterazione
 print("--------------------------------------------------------------------------")
 print("\nAnalisi condizioni where per ogni dettaglio con entropia alta:")
 for _, riga in df_entropie_filtrate.iterrows():
@@ -218,14 +213,12 @@ for _, riga in df_entropie_filtrate.iterrows():
             for v in violazioni:
                 print(v)
         else:
-            print(" ✅ Tutte le condizioni rispettate")
+            print("Tutte le condizioni rispettate")
     else:
         print(f"\n{categoria} → {dettaglio} → Nessuna condizione definita")
 
-# Inizializza lista per raccogliere tutte le violazioni
 violazioni_complessive = []
 
-# Iterazione sulle entropie significative
 print("--------------------------------------------------------------------------")
 print("\nAnalisi condizioni where per ogni dettaglio con entropia alta:")
 for _, riga in df_entropie_filtrate.iterrows():
@@ -265,7 +258,7 @@ for _, riga in df_entropie_filtrate.iterrows():
                 "Esito": "Ok",
                 "Violazione": "-"
             })
-            print("✅ Tutte le condizioni rispettate")
+            print("Tutte le condizioni rispettate")
     else:
         print(f"\n{categoria} → {dettaglio} ({tipo}) → Nessuna condizione definita")
 
@@ -274,5 +267,5 @@ for _, riga in df_entropie_filtrate.iterrows():
 df_violazioni = pd.DataFrame(violazioni_complessive)
 df_violazioni.to_csv("violazioni_anomalie.csv", index=False)
 
-print("\n📁 File 'violazioni_anomalie.csv' salvato con successo!")
+print("\nFile 'violazioni_anomalie.csv' salvato con successo!")
 print(df_violazioni.head())

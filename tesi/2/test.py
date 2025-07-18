@@ -2,8 +2,6 @@ import pandas as pd
 from scipy.stats import entropy
 import numpy as np
 
-
-
 df = pd.read_csv("../dataset/registro_cassa.csv", sep=";", encoding="ISO-8859-1")
 df["Importo"] = df["Importo"].str.replace(",", ".").astype(float).round(2)
 df["Data Movimento"] = pd.to_datetime(df["Data Movimento"], format="%d/%m/%Y")
@@ -39,13 +37,13 @@ riepilogo_stipendi["Totale_Uscite"] = riepilogo_stipendi["Totale_Uscite"].fillna
 # Regole di classificazione
 def classifica_riga(row):
     if row["Numero_Movimenti"] == 0:
-        return "❌ Buco"
+        return "Buco"
     elif row["Numero_Movimenti"] == 1 and round(row["Totale_Uscite"], 2) == -8200.00:
-        return "✅ Normale"
+        return "Normale"
     elif row["Numero_Movimenti"] > 1:
-        return "⚠️ Anomalia: Multi-movimento"
+        return "Anomalia: Multi-movimento"
     elif round(row["Totale_Uscite"], 2) != -8200.00:
-        return "⚠️ Anomalia: Importo anomalo"
+        return "Anomalia: Importo anomalo"
     else:
         return "?"
 
@@ -53,12 +51,12 @@ riepilogo_stipendi["Classificazione"] = riepilogo_stipendi.apply(classifica_riga
 print("Riepilogo stipendi per mese con classificazione:")
 print(riepilogo_stipendi)
 
-anomalie_stipendi = riepilogo_stipendi[riepilogo_stipendi["Classificazione"] != "✅ Normale"]
+anomalie_stipendi = riepilogo_stipendi[riepilogo_stipendi["Classificazione"] != "Normale"]
 
 print("Mesi con comportamento anomalo nei movimenti 'Stipendi':")
 print(anomalie_stipendi)
 
 print("\nTotale mesi analizzati:", len(riepilogo_stipendi))
-print("Mesi normali:", (riepilogo_stipendi["Classificazione"] == "✅ Normale").sum())
+print("Mesi normali:", (riepilogo_stipendi["Classificazione"] == "Normale").sum())
 print("Mesi con anomalie:", len(anomalie_stipendi))
 

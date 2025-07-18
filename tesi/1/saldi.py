@@ -1,11 +1,3 @@
-##
-## Calcolo dell'entropia di Shannon sul saldo mensile per categoria
-##
-## Questo blocco misura la stabilità finanziaria netta delle categorie.
-## L'entropia viene calcolata sulla distribuzione dei saldi mensili
-## (assoluti), indicando quanto siano prevedibili i flussi economici netti.
-##
-
 import pandas as pd
 from scipy.stats import entropy
 import numpy as np
@@ -17,7 +9,6 @@ df["Mese"] = df["Data Movimento"].dt.to_period("M")
 
 riepilogo_saldo = df.groupby(["Mese", "CashFlow - Categoria"])["Importo"].sum().reset_index()
 
-# Visualizza i primi saldi
 # print("\nSaldo mensile per categoria:")
 # print(riepilogo_saldo.head(10))
 

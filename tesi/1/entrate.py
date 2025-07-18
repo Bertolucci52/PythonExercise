@@ -1,27 +1,7 @@
-##
-## Calcolo dell'entropia di Shannon per le entrate del Cash Flow
-##
-## In questa sezione si analizza la variabilità delle entrate mensili, distinguendo tra:
-## - Entrate "pure": movimenti positivi con Passaggio Fondi = No (es. finanziamenti, contributi, incassi esterni)
-## - Entrate "interne": trasferimenti tra conti, ovvero movimenti positivi con Passaggio Fondi = Sì
-## L'obiettivo è misurare, per ogni categoria e dettaglio, la stabilità dei flussi in ingresso nel tempo.
-##
-## Risultati principali (entrate pure):
-## - Reparti Operativi → entropia 6.9627 bit → comportamento altamente variabile - forte isntabilità anche sul lato delle entrate
-## - Finanziamenti → entropia 4.6558 bit → comportamento moderatamente variabile - più regolari ma non del tutto prevedibili
-##
-## Risultati (entrate da trasferimenti interni):
-## - Viene calcolata l'entropia solo per le categorie ≠ "Finanziamenti", che ricevono fondi tramite Passaggio Fondi = Sì
-## - Questo consente di osservare il comportamento delle strutture nel richiedere/gestire fondi interni
-## Questo doppio livello di analisi permette di distinguere tra instabilità reale (entrate esterne) e instabilità interna,
-## evidenziando potenziali squilibri o anomalie nella gestione delle risorse.
-
-
 import pandas as pd
 from scipy.stats import entropy
 import numpy as np
 
-# definizione entrate per categorie
 
 df = pd.read_csv("../dataset/registro_cassa.csv", sep=";", encoding="ISO-8859-1")
 df["Importo"] = df["Importo"].str.replace(",", ".").astype(float).round(2)
@@ -32,7 +12,6 @@ df_entrate = df[(df["Importo"] > 0) & (df["Passaggio Fondi"] == "No")]
 df_entrate["Mese"] = df_entrate["Data Movimento"].dt.to_period("M")
 riepilogo = df_entrate.groupby(["Mese", "CashFlow - Categoria"])["Importo"].sum().reset_index()
 
-# Calcolo entropia di Shannon per le entrate vere (per categoria)
 categorie = riepilogo["CashFlow - Categoria"].unique()
 risultati_entrate = []
 
@@ -60,11 +39,8 @@ print("\nEntropia delle entrate vere per categoria:")
 print(df_entropie_entrate.head(10))
 
 ##
-## Entropia delle entrate pure per ciascun dettaglio
-##
-## Si analizzano le entrate reali (Importo > 0 e Passaggio Fondi = No)
+## entrate reali (Importo > 0 e Passaggio Fondi = No)
 ## calcolando l'entropia mensile per ciascun dettaglio (CashFlow - Dettaglio),
-## nel rispetto della gerarchia 1:N rispetto alla categoria principale.
 ##
 
 risultati_dettagli_entrate = []
@@ -131,7 +107,7 @@ if risultati_trasf:
     print("\nEntropia delle entrate da passaggi fondi (interne):")
     print(df_entropie_trasferimenti.head(10))
 else:
-    print("\n⚠️ Nessuna categoria ha ricevuto entrate da passaggi fondi (interne).")
+    print("\nNessuna categoria ha ricevuto entrate da passaggi fondi (interne).")
 
 riepilogo_dett_trasf = df_trasferimenti.groupby(
     ["Mese", "CashFlow - Categoria", "CashFlow - Dettaglio"]
