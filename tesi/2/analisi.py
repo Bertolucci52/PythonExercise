@@ -195,6 +195,7 @@ condizioni_where = {
 
 print("--------------------------------------------------------------------------")
 print("\nAnalisi condizioni where per ogni dettaglio con entropia alta:")
+
 for _, riga in df_entropie_filtrate.iterrows():
     categoria = riga["Categoria"]
     dettaglio = riga["Dettaglio"]
@@ -221,6 +222,7 @@ violazioni_complessive = []
 
 print("--------------------------------------------------------------------------")
 print("\nAnalisi condizioni where per ogni dettaglio con entropia alta:")
+
 for _, riga in df_entropie_filtrate.iterrows():
     categoria = riga["Categoria"]
     dettaglio = riga["Dettaglio"]

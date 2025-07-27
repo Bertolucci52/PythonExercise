@@ -1,0 +1,3 @@
+Nella prima fase si è proceduto alla costruzione di un modello di Machine Learning non supervisionato,
+basato su Isolation Forest, con l’obiettivo di identificare comportamenti anomali all’interno dei movimenti finanziari, 
+senza alcuna conoscenza preliminare del contenuto semantico del dataset.

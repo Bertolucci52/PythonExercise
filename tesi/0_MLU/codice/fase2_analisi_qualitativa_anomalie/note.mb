@@ -1,0 +1,30 @@
+Per ogni anomalia individuata andremo a calcolare:
+
+a) Entropia storica = media (o mediana) dell’entropia di quella categoria + dettaglio, escludendo il mese anomalo
+
+b) Entropia marginale = quella del mese segnalato
+
+c) Scarto = differenza o rapporto
+
+In questo modo potremmo rapportare l'anomalia segnalata rispetto alla distribuzione storica e, a seconda del risultato ottenuto,
+potremmo definire:
+entropia marginale >> entropia storica ⇒ anomala davvero
+
+entropia marginale ≈ entropia storica ⇒ forse falso positivo
+
+entropia marginale << entropia storica ⇒ anomalia “silenziosa” (es. mese insolitamente regolare in contesto caotico)
+
+✅ Rapporto alto (es. > 2.0)
+→ La distribuzione del mese anomalo è molto più caotica del comportamento tipico.
+➡️ Esempio chiaro di discontinuità o evento fuori scala.
+
+✅ Scarto assoluto alto (es. > 1.0)
+→ Anche senza confronto relativo, c’è uno sbalzo sostanziale nella distribuzione.
+
+❌ Rapporto vicino a 1.0
+→ Il comportamento è simile alla media → potenziale falso positivo del modello
+
+⚠️ Rapporto < 1.0
+→ L’entropia marginale è più bassa della media → il comportamento è diventato improvvisamente troppo regolare
+→ Potrebbe indicare assenza di attività o comportamento bloccato (anomalia “silenziosa”)
+
