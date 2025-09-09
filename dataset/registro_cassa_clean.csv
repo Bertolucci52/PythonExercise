@@ -186,9 +186,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2194,04;2015-02-11
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1588,11;2015-02-11;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2829,96;2015-02-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3750,6;2015-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;43016,83;2015-02-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;696,69;2015-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-43016,83;2015-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-210,51;2015-02-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2711,98;2015-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2390,7;2015-02-12;0;Reparti Operativi;Hardware
@@ -405,12 +403,10 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;574,77;2015-03-21;
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1432,18;2015-03-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4448,27;2015-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;356,84;2015-03-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2015-03-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3924,39;2015-03-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2795,59;2015-03-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2211,01;2015-03-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-406,37;2015-03-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2015-03-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3212,28;2015-03-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;801,61;2015-03-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-530,84;2015-03-23;0;Reparti Operativi;Software
@@ -824,12 +820,10 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2015,76;2015-06-11;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3677,48;2015-06-11;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3692,42;2015-06-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2876,68;2015-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-47218,86;2015-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3916,07;2015-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3504,44;2015-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3774,03;2015-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3304,67;2015-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;47218,86;2015-06-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4408,18;2015-06-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2700,84;2015-06-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2659,56;2015-06-13;0;Reparti Operativi;Hardware
@@ -884,8 +878,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4138,79;2015-06-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4421,05;2015-06-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4265,64;2015-06-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1115,74;2015-06-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;22718,0;2015-06-22;1;Amministrazione;Stipendi
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2015-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4233,89;2015-06-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2194,61;2015-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2497,23;2015-06-23;0;Reparti Operativi;Hardware
@@ -1734,10 +1726,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1891,65;2015-11-29
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4777,97;2015-11-30;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1224,68;2015-11-30;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4463,25;2015-12-01;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-9000,0;2015-12-01;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4395,09;2015-12-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-812,81;2015-12-01;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;9000,0;2015-12-01;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;938,05;2015-12-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-535,28;2015-12-01;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;294,55;2015-12-01;0;Reparti Operativi;Software
@@ -2087,12 +2077,10 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3995,79;2016-01-31;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2135,1;2016-01-31;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-80,0;2016-01-31;0;Logistica;Auto Aziendali
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1138,01;2016-01-31;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;15000,0;2016-02-01;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3162,95;2016-02-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4851,81;2016-02-01;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1344,67;2016-02-01;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-378,71;2016-02-01;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-15000,0;2016-02-01;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2977,76;2016-02-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1207,03;2016-02-02;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2421,71;2016-02-02;0;Reparti Operativi;Software
@@ -2320,11 +2308,9 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3765,54;2016-03-20;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1871,53;2016-03-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1555,45;2016-03-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1036,1;2016-03-21;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2016-03-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-599,23;2016-03-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2334,62;2016-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1323,65;2016-03-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2016-03-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-343,81;2016-03-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-246,58;2016-03-23;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4395,96;2016-03-24;0;Reparti Operativi;Software
@@ -2454,10 +2440,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3252,79;2016-04-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4792,15;2016-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-117,69;2016-04-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1158,28;2016-04-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2016-04-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1305,9;2016-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3355,89;2016-04-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2016-04-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2575,72;2016-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4147,56;2016-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2992,52;2016-04-22;0;Reparti Operativi;Hardware
@@ -2707,13 +2691,11 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1175,26;2016-06-10
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4552,57;2016-06-10;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3878,53;2016-06-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2217,08;2016-06-11;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;42080,03;2016-06-12;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3908,62;2016-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1441,9;2016-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3548,28;2016-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1791,31;2016-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2547,27;2016-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-42080,03;2016-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1003,72;2016-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1078,76;2016-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3594,08;2016-06-12;0;Reparti Operativi;Hardware
@@ -3047,11 +3029,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1943,04;2016-08-21;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4227,21;2016-08-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1539,53;2016-08-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3757,91;2016-08-22;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2016-08-22;1;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1062,39;2016-08-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2016-08-22;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2016-08-22;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2016-08-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1104,45;2016-08-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4577,76;2016-08-23;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4441,39;2016-08-24;0;Reparti Operativi;Software
@@ -3231,8 +3209,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3295,92;2016-10-01
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1023,93;2016-10-01;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1560,15;2016-10-01;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3709,02;2016-10-01;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2016-10-01;1;Amministrazione;Stipendi
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2016-10-01;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3987,28;2016-10-01;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1874,81;2016-10-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4000,15;2016-10-02;0;Reparti Operativi;Software
@@ -3675,7 +3651,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4332,72;2016-12-31
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4958,31;2016-12-31;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4012,74;2016-12-31;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2014,6;2016-12-31;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-25000,0;2017-01-01;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1690,74;2017-01-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3304,67;2017-01-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4007,66;2017-01-01;0;Reparti Operativi;Hardware
@@ -3906,9 +3881,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-806,77;2017-02-12;0;
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4553,99;2017-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2855,41;2017-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4479,49;2017-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-42317,81;2017-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3312,35;2017-02-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;42317,81;2017-02-12;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-944,95;2017-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3194,11;2017-02-13;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4508,16;2017-02-13;0;Reparti Operativi;Hardware
@@ -4114,11 +4087,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3725,89;2017-03-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4508,95;2017-03-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4143,46;2017-03-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3262,52;2017-03-21;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2017-03-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2964,35;2017-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4591,06;2017-03-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2248,14;2017-03-22;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2017-03-22;1;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3988,11;2017-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4192,82;2017-03-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;151,96;2017-03-24;0;Reparti Operativi;Hardware
@@ -4147,9 +4118,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4794,43;2017-03-30;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3931,44;2017-03-30;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-514,18;2017-03-31;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1648,91;2017-03-31;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2017-04-01;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-320,51;2017-04-01;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2017-04-01;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1584,44;2017-04-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;275,75;2017-04-01;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-163,0;2017-04-02;0;Reparti Operativi;Software
@@ -4251,10 +4220,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-972,8;2017-04-21;0;R
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1602,45;2017-04-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4066,6;2017-04-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;775,0;2017-04-21;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2017-04-22;1;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4373,15;2017-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3226,32;2017-04-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2017-04-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;649,49;2017-04-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-507,11;2017-04-23;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4041,05;2017-04-23;0;Reparti Operativi;Hardware
@@ -4313,8 +4280,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3096,21;2017-05-02;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4192,85;2017-05-02;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;332,9;2017-05-02;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;142,81;2017-05-02;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;20000,0;2017-05-02;1;Amministrazione;Stipendi
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-20000,0;2017-05-02;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4525,69;2017-05-02;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1910,07;2017-05-03;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;599,34;2017-05-03;0;Reparti Operativi;Hardware
@@ -4516,9 +4481,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2543,25;2017-06-10;0
 IT25O030692008000000001585;Conti Correnti - Deposito;Entrata;60000,0;2017-06-10;0;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2621,79;2017-06-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2660,67;2017-06-11;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-44859,68;2017-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3448,03;2017-06-12;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;44859,68;2017-06-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2125,62;2017-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3863,92;2017-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2599,4;2017-06-12;0;Reparti Operativi;Hardware
@@ -4571,7 +4534,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2251,18;2017-06-21;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4445,69;2017-06-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1252,63;2017-06-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2603,42;2017-06-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2017-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4292,55;2017-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2109,3;2017-06-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-351,54;2017-06-22;0;Reparti Operativi;Hardware
@@ -5522,9 +5484,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-125,92;2017-11-30;
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3880,66;2017-11-30;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4042,19;2017-11-30;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1397,7;2017-12-01;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;20000,0;2017-12-01;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2656,52;2017-12-01;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;5000,0;2017-12-01;1;Amministrazione;Bonus Lavoratore
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3796,8;2017-12-02;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4605,96;2017-12-02;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4028,64;2017-12-02;0;Reparti Operativi;Software
@@ -5910,11 +5870,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;546,8;2018-02-11;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;830,24;2018-02-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1971,05;2018-02-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3298,77;2018-02-11;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-46104,39;2018-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1114,11;2018-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;59,97;2018-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1035,9;2018-02-12;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;46104,39;2018-02-12;1;Amministrazione;Bonus Lavoratore
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2876,77;2018-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;870,4;2018-02-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-695,47;2018-02-13;0;Reparti Operativi;Software
@@ -5968,7 +5926,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2583,48;2018-02-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;536,61;2018-02-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;382,29;2018-02-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-83,19;2018-02-21;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2018-02-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1574,37;2018-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-463,35;2018-02-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3460,78;2018-02-22;0;Reparti Operativi;Software
@@ -5977,7 +5934,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1554,72;2018-02-22
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4077,25;2018-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4958,24;2018-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-683,93;2018-02-22;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2018-02-22;1;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4759,08;2018-02-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2963,45;2018-02-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4603,75;2018-02-23;0;Reparti Operativi;Hardware
@@ -6122,8 +6078,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1684,68;2018-03-22;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3636,08;2018-03-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1367,66;2018-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;344,86;2018-03-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2018-03-22;1;Finanziamenti;Conferimento quota capitale
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2018-03-22;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4925,54;2018-03-23;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2811,76;2018-03-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3136,28;2018-03-23;0;Reparti Operativi;Software
@@ -6591,8 +6545,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3558,27;2018-06-12
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4456,82;2018-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3277,13;2018-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4124,54;2018-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;42288,42;2018-06-12;1;Amministrazione;Stipendi
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-42288,42;2018-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;695,7;2018-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4166,97;2018-06-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4587,99;2018-06-13;0;Reparti Operativi;Software
@@ -6649,10 +6601,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3689,77;2018-06-21;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4439,45;2018-06-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1090,97;2018-06-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3459,6;2018-06-22;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2018-06-22;1;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-123,64;2018-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3180,41;2018-06-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2018-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2488,0;2018-06-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-620,07;2018-06-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3319,5;2018-06-24;0;Reparti Operativi;Software
@@ -6840,9 +6790,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1893,09;2018-07-31;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2619,39;2018-07-31;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;733,41;2018-07-31;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;234,27;2018-07-31;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;70000,0;2018-08-01;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2698,26;2018-08-01;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-70000,0;2018-08-01;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;160,81;2018-08-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1352,0;2018-08-01;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-718,27;2018-08-02;0;Reparti Operativi;Hardware
@@ -7902,8 +7850,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3592,57;2019-02-12
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4325,39;2019-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3586,99;2019-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1970,31;2019-02-12;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;39601,68;2019-02-12;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-39601,68;2019-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2254,8;2019-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3549,91;2019-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-795,67;2019-02-12;0;Reparti Operativi;Software
@@ -8262,14 +8208,12 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1315,67;2019-04-21
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3244,65;2019-04-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-178,73;2019-04-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2257,98;2019-04-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2019-04-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2068,74;2019-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3426,43;2019-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2963,03;2019-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3741,38;2019-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2731,93;2019-04-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1590,96;2019-04-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2019-04-22;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3751,48;2019-04-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1730,31;2019-04-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3646,12;2019-04-23;0;Reparti Operativi;Software
@@ -8423,10 +8367,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3636,05;2019-05-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4861,99;2019-05-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-400,49;2019-05-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2700,6;2019-05-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2019-05-22;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-145,57;2019-05-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3375,44;2019-05-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2019-05-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4426,56;2019-05-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1333,6;2019-05-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;939,8;2019-05-22;0;Reparti Operativi;Hardware
@@ -8542,8 +8484,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-720,82;2019-06-12;
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3418,42;2019-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-834,73;2019-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4160,78;2019-06-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;44239,64;2019-06-12;1;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-44239,64;2019-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1138,32;2019-06-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4816,41;2019-06-13;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3746,33;2019-06-14;0;Reparti Operativi;Hardware
@@ -8742,8 +8682,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3179,39;2019-07-21;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1883,55;2019-07-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-609,88;2019-07-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3955,63;2019-07-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2019-07-22;1;Amministrazione;Stipendi
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2019-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4536,31;2019-07-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;203,99;2019-07-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-962,15;2019-07-22;0;Reparti Operativi;Hardware
@@ -8933,10 +8871,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4518,11;2019-08-21;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4968,61;2019-08-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3137,04;2019-08-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1750,04;2019-08-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2019-08-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4772,72;2019-08-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-251,47;2019-08-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2019-08-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-276,95;2019-08-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3670,5;2019-08-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4227,44;2019-08-23;0;Reparti Operativi;Software
@@ -9783,10 +9719,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1014,33;2020-02-10
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3622,53;2020-02-11;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3419,93;2020-02-11;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1972,22;2020-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-43430,42;2020-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-601,15;2020-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4466,46;2020-02-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;43430,42;2020-02-12;1;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2522,87;2020-02-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;744,62;2020-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2876,31;2020-02-12;0;Reparti Operativi;Hardware
@@ -9834,9 +9768,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3488,59;2020-02-21
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;312,47;2020-02-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3194,57;2020-02-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-834,67;2020-02-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2020-02-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2664,27;2020-02-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2020-02-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1817,05;2020-02-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2181,88;2020-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1090,48;2020-02-22;0;Reparti Operativi;Software
@@ -10183,11 +10115,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3506,89;2020-04-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;543,28;2020-04-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2820,67;2020-04-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1608,15;2020-04-21;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2020-04-22;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2834,54;2020-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3064,93;2020-04-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3255,05;2020-04-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2020-04-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;551,28;2020-04-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3916,74;2020-04-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2291,92;2020-04-23;0;Reparti Operativi;Software
@@ -10454,11 +10384,9 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4178,66;2020-06-11;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4007,76;2020-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4853,1;2020-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1711,29;2020-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-45232,11;2020-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;303,04;2020-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1339,61;2020-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2145,57;2020-06-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;45232,11;2020-06-12;1;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4207,47;2020-06-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1416,51;2020-06-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1072,39;2020-06-13;0;Reparti Operativi;Software
@@ -10511,9 +10439,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-393,27;2020-06-21;0;
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2611,16;2020-06-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-209,74;2020-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3095,92;2020-06-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2020-06-22;1;Amministrazione;Bonus Lavoratore
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1508,83;2020-06-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2020-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4626,3;2020-06-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1338,72;2020-06-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4099,72;2020-06-23;0;Reparti Operativi;Software
@@ -11262,10 +11188,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;581,16;2020-11-20;0;
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4142,06;2020-11-20;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2381,08;2020-11-20;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2765,58;2020-11-21;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;100000,0;2020-11-21;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;878,35;2020-11-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3905,61;2020-11-21;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-100000,0;2020-11-21;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;55,85;2020-11-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3333,92;2020-11-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3143,31;2020-11-22;0;Reparti Operativi;Hardware
@@ -11685,10 +11609,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-223,26;2021-02-11;0;
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1126,61;2021-02-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2607,4;2021-02-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;443,74;2021-02-11;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-46307,9;2021-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1298,66;2021-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-620,79;2021-02-12;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;46307,9;2021-02-12;1;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-390,9;2021-02-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2438,99;2021-02-13;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2772,61;2021-02-13;0;Reparti Operativi;Hardware
@@ -11740,8 +11662,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2318,78;2021-02-21;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3387,48;2021-02-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3125,15;2021-02-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-176,06;2021-02-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2021-02-22;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2021-02-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;382,8;2021-02-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-862,08;2021-02-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2474,34;2021-02-24;0;Reparti Operativi;Software
@@ -12363,9 +12283,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4023,81;2021-06-11
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-587,29;2021-06-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4641,37;2021-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3223,64;2021-06-12;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-40893,12;2021-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2321,9;2021-06-12;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;40893,12;2021-06-12;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;447,42;2021-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1179,69;2021-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4242,53;2021-06-12;0;Reparti Operativi;Software
@@ -12406,8 +12324,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3707,0;2021-06-21;
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2628,11;2021-06-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-81,84;2021-06-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4816,43;2021-06-22;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2021-06-22;1;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2021-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2098,58;2021-06-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;140,41;2021-06-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1505,08;2021-06-23;0;Reparti Operativi;Hardware
@@ -12562,8 +12478,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1300,78;2021-07-22;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2423,49;2021-07-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2599,11;2021-07-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;70,5;2021-07-22;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2021-07-22;1;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2021-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-236,18;2021-07-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2123,31;2021-07-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2661,94;2021-07-23;0;Reparti Operativi;Software
@@ -13580,10 +13494,8 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1629,02;2022-02-10;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1000,8;2022-02-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3349,61;2022-02-11;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3952,36;2022-02-11;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-41475,71;2022-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-854,47;2022-02-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3418,43;2022-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;41475,71;2022-02-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4146,46;2022-02-14;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1882,99;2022-02-14;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-752,91;2022-02-14;0;Reparti Operativi;Software
@@ -14063,8 +13975,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;748,46;2022-05-21;
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4497,2;2022-05-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4805,68;2022-05-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-643,64;2022-05-21;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2022-05-22;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2022-05-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3064,99;2022-05-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2271,06;2022-05-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-214,4;2022-05-23;0;Reparti Operativi;Hardware
@@ -14164,11 +14074,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4709,24;2022-06-11
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1419,34;2022-06-11;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1435,24;2022-06-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-407,33;2022-06-11;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;45141,36;2022-06-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4856,42;2022-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3132,34;2022-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2263,87;2022-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-45141,36;2022-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4401,32;2022-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3893,21;2022-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1059,6;2022-06-12;0;Reparti Operativi;Hardware
@@ -14230,7 +14138,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3415,36;2022-06-21;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2099,79;2022-06-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1424,91;2022-06-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4376,98;2022-06-21;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2022-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4758,34;2022-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1339,33;2022-06-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;557,96;2022-06-22;0;Reparti Operativi;Software
@@ -14239,7 +14146,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1684,14;2022-06-22
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;277,18;2022-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2737,19;2022-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;104,53;2022-06-22;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2022-06-22;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4152,15;2022-06-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1547,31;2022-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3009,09;2022-06-23;0;Reparti Operativi;Software
@@ -14397,12 +14303,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3353,43;2022-07-21
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2807,09;2022-07-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4691,07;2022-07-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1971,47;2022-07-21;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2022-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4379,54;2022-07-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2022-07-22;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2022-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2658,38;2022-07-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2022-07-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2731,63;2022-07-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3967,75;2022-07-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4061,47;2022-07-23;0;Reparti Operativi;Software
@@ -15429,11 +15331,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;193,6;2023-02-11;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2693,58;2023-02-11;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3088,71;2023-02-11;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2768,53;2023-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-41396,25;2023-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-328,1;2023-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3078,23;2023-02-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3403,87;2023-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;41396,25;2023-02-12;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1842,39;2023-02-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4682,72;2023-02-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3638,83;2023-02-13;0;Reparti Operativi;Software
@@ -15477,9 +15377,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3550,12;2023-02-21
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-502,32;2023-02-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4287,29;2023-02-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3461,54;2023-02-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2023-02-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2786,83;2023-02-22;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2023-02-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;173,13;2023-02-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4662,96;2023-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1574,07;2023-02-22;0;Reparti Operativi;Hardware
@@ -15759,13 +15657,11 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3806,77;2023-04-21;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;909,07;2023-04-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-653,63;2023-04-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2913,28;2023-04-22;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2023-04-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4390,84;2023-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-753,94;2023-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2080,22;2023-04-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4905,16;2023-04-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3955,63;2023-04-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2023-04-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-638,62;2023-04-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3244,47;2023-04-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-586,48;2023-04-23;0;Reparti Operativi;Hardware
@@ -16005,10 +15901,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4910,09;2023-06-11
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3222,19;2023-06-11;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2543,38;2023-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1301,88;2023-06-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;40376,42;2023-06-12;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1807,7;2023-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4322,58;2023-06-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-40376,42;2023-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4842,03;2023-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3221,75;2023-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4350,63;2023-06-12;0;Reparti Operativi;Hardware
@@ -16061,13 +15955,11 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4982,69;2023-06-21
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1923,9;2023-06-21;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2996,79;2023-06-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3927,93;2023-06-21;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2023-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3544,37;2023-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-230,14;2023-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2370,23;2023-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3645,19;2023-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4722,69;2023-06-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2023-06-22;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2667,27;2023-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4281,35;2023-06-23;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-540,51;2023-06-23;0;Reparti Operativi;Software
@@ -16206,9 +16098,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3020,17;2023-07-20;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2604,25;2023-07-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4225,37;2023-07-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1116,6;2023-07-22;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2023-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2739,82;2023-07-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2023-07-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;413,93;2023-07-23;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-80,0;2023-07-23;0;Logistica;Auto Aziendali
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4593,25;2023-07-23;0;Reparti Operativi;Hardware
@@ -16252,11 +16142,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4091,65;2023-07-31
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1109,66;2023-07-31;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1824,06;2023-07-31;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-334,31;2023-08-01;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;150000,0;2023-08-01;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4313,92;2023-08-01;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1242,79;2023-08-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3509,33;2023-08-01;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-150000,0;2023-08-01;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;104,79;2023-08-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2549,63;2023-08-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-885,08;2023-08-01;0;Reparti Operativi;Software
@@ -17110,12 +16998,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-823,97;2024-01-01;
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;993,24;2024-01-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1062,85;2024-01-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2670,46;2024-01-01;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;30000,0;2024-01-02;1;Logistica;Beni immobili
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-25000,0;2024-01-02;1;Finanziamenti;Conferimento quota capitale
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-30000,0;2024-01-02;1;Finanziamenti;Conferimento quota capitale
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;25000,0;2024-01-02;1;Logistica;Auto Aziendali
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-5000,0;2024-01-02;1;Finanziamenti;Conferimento quota capitale
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;5000,0;2024-01-02;1;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-64,71;2024-01-03;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2229,85;2024-01-03;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-188,02;2024-01-03;0;Reparti Operativi;Hardware
@@ -17314,11 +17196,9 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2776,89;2024-02-11
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3573,82;2024-02-11;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1504,27;2024-02-11;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2551,97;2024-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-45301,01;2024-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1908,56;2024-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2721,73;2024-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1917,41;2024-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;45301,01;2024-02-12;1;Amministrazione;Bonus Lavoratore
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4856,83;2024-02-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3856,63;2024-02-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3741,25;2024-02-12;0;Reparti Operativi;Hardware
@@ -17518,9 +17398,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2503,67;2024-03-20;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4694,83;2024-03-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-137,25;2024-03-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;121,54;2024-03-21;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2024-03-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4171,3;2024-03-22;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2024-03-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;986,65;2024-03-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1069,13;2024-03-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3004,95;2024-03-22;0;Reparti Operativi;Software
@@ -17880,9 +17758,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;470,99;2024-05-31;0;
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2348,54;2024-05-31;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;319,02;2024-05-31;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-4044,32;2024-06-01;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;50000,0;2024-06-01;1;Logistica;Auto Aziendali
 IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-750,88;2024-06-01;0;Finanziamenti;Prestito bancario
-IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-50000,0;2024-06-01;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2333,55;2024-06-01;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2630,39;2024-06-01;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1622,17;2024-06-02;0;Reparti Operativi;Hardware
@@ -17953,8 +17829,6 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-50,09;2024-06-11;0
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4098,28;2024-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-218,28;2024-06-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2850,76;2024-06-12;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;43328,42;2024-06-12;1;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-43328,42;2024-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4743,43;2024-06-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-943,01;2024-06-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1997,61;2024-06-14;0;Reparti Operativi;Software
@@ -18006,8 +17880,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2431,48;2024-06-22;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2106,59;2024-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4130,19;2024-06-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1185,17;2024-06-22;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2024-06-22;1;Amministrazione;Bonus Lavoratore
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2024-06-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;988,48;2024-06-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;3638,37;2024-06-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2558,88;2024-06-22;0;Reparti Operativi;Software
@@ -19167,9 +19039,7 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;375,34;2025-01-31;0;
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2031,76;2025-01-31;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4652,45;2025-01-31;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-572,21;2025-01-31;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2025-02-01;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1399,68;2025-02-01;0;Reparti Operativi;Hardware
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2025-02-01;1;Logistica;Auto Aziendali
 IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-750,88;2025-02-01;0;Finanziamenti;Prestito bancario
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-858,46;2025-02-01;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3568,54;2025-02-01;0;Reparti Operativi;Software
@@ -19223,9 +19093,7 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3717,37;2025-02-12
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4232,79;2025-02-12;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1981,05;2025-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-80,0;2025-02-12;0;Logistica;Auto Aziendali
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-41207,69;2025-02-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2965,16;2025-02-12;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;41207,69;2025-02-12;1;Amministrazione;Stipendi
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4210,08;2025-02-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3987,7;2025-02-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;739,07;2025-02-12;0;Reparti Operativi;Software
@@ -19294,7 +19162,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1178,71;2025-02-21;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4268,09;2025-02-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4193,54;2025-02-21;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-867,44;2025-02-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2025-02-22;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;681,6;2025-02-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1968,51;2025-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4965,67;2025-02-22;0;Reparti Operativi;Software
@@ -19303,7 +19170,6 @@ IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-1966,97;2025-02-22;0
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3689,75;2025-02-22;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3173,85;2025-02-22;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3946,14;2025-02-22;0;Reparti Operativi;Software
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;10000,0;2025-02-22;1;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4260,02;2025-02-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3635,74;2025-02-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4400,5;2025-02-23;0;Reparti Operativi;Hardware
@@ -19455,12 +19321,10 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3644,51;2025-03-21
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-1795,6;2025-03-21;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1735,41;2025-03-21;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2429,94;2025-03-21;0;Reparti Operativi;Software
-IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;10000,0;2025-03-22;1;Amministrazione;Stipendi
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;1866,54;2025-03-22;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2590,07;2025-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-185,28;2025-03-22;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-2559,92;2025-03-22;0;Reparti Operativi;Hardware
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-10000,0;2025-03-22;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-4325,83;2025-03-23;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;2160,58;2025-03-23;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2902,55;2025-03-23;0;Reparti Operativi;Hardware
@@ -19906,10 +19770,8 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2374,0;2025-06-12;
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;2010,75;2025-06-12;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;4227,56;2025-06-12;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3119,2;2025-06-12;0;Reparti Operativi;Software
-IT25O030692008000000001585;Conti Correnti - Deposito;Uscita;-44659,67;2025-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;1758,21;2025-06-12;0;Reparti Operativi;Software
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-80,0;2025-06-12;0;Logistica;Auto Aziendali
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;44659,67;2025-06-12;1;Finanziamenti;Conferimento quota capitale
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4204,22;2025-06-13;0;Reparti Operativi;Hardware
 IT25O0200508000000001908;Conti Correnti - Operativi;Uscita;-3434,7;2025-06-13;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-2551,69;2025-06-13;0;Reparti Operativi;Software
@@ -20011,5 +19873,3 @@ IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;4663,77;2025-06-30
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3658,16;2025-06-30;0;Reparti Operativi;Hardware
 IT25O030692008000000081100;Conti Correnti - Operativi;Entrata;3880,34;2025-06-30;0;Reparti Operativi;Software
 IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-3606,51;2025-06-30;0;Reparti Operativi;Hardware
-IT25O030692008000000081100;Conti Correnti - Operativi;Uscita;-20000,0;2025-06-30;1;Amministrazione;Stipendi
-IT25O0200508000000001908;Conti Correnti - Operativi;Entrata;20000,0;2025-06-30;1;Reparti Operativi;Hardware

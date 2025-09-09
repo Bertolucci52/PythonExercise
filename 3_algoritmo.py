@@ -1,4 +1,4 @@
-# algoritmo_v2.py
+# algoritmo_v2.py (versione senza passaggio_fondi)
 # ============================================================
 # Rilevazione anomalie con entropia di Shannon
 # Livello 0 riscritto con:
@@ -27,6 +27,10 @@ COL_YM           = "anno_mese"
 ALPHA            = 1.0      # Laplace smoothing
 THRESH           = 0.01     # soglia su |ΔHn| per attivare il drill-down (Livello 1)
 
+# --- aggiungi vicino agli altri parametri di config ---
+MISSING_TOKEN = "__MISSING__"
+# ------------------------------------------------------
+
 # Parametri Livello 2 (placeholder, non usati in questo step)
 THRESH_N_BURST_RATIO   = 2.0
 THRESH_AMT_SPIKE_RATIO = 2.0
@@ -38,6 +42,42 @@ OUT_LIV_1   = "./dataset/entropia_liv_1_mese_anno.csv"      # verrà scritto qua
 OUT_LIV_2   = "./dataset/entropia_liv_2_anomalie.csv"       # verrà scritto quando implementiamo il Livello 2
 # =========================================
 
+# === NUOVO: etichette mensili (griglia 12×anni con token MISSING) ===
+def _monthly_labels(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Ritorna un DataFrame con colonne [categoria_dettaglio, anno, anno_mese, y_month]
+    dove y_month è:
+      - la moda di classe_importo_id se il mese ha movimenti,
+      - MISSING_TOKEN se non ci sono movimenti in quel mese.
+    """
+    # tipi coerenti
+    df = df[[X, COL_ANNO, COL_YM, Y]].copy()
+    for c in [X, COL_ANNO, COL_YM, Y]:
+        df[c] = df[c].astype(str)
+
+    # moda per mese (se più classi a pari merito, prende la prima in ordine)
+    def _mode_str(s: pd.Series) -> str:
+        vc = s.dropna().astype(str).value_counts()
+        return vc.index[0] if len(vc) else np.nan
+
+    monthly_mode = (
+        df.groupby([X, COL_ANNO, COL_YM])[Y]
+          .apply(_mode_str)
+          .reset_index(name="y_month")
+    )
+
+    # griglia completa 12 mesi per tutte le (cat, anno) presenti
+    cats_years = monthly_mode[[X, COL_ANNO]].drop_duplicates()
+    grid_rows = []
+    for cat, yr in cats_years.itertuples(index=False, name=None):
+        for m in range(1, 13):
+            grid_rows.append((str(cat), str(yr), f"{yr}-{m:02d}"))
+    grid = pd.DataFrame(grid_rows, columns=[X, COL_ANNO, COL_YM])
+
+    # riempi buchi con MISSING_TOKEN
+    out = grid.merge(monthly_mode, on=[X, COL_ANNO, COL_YM], how="left")
+    out["y_month"] = out["y_month"].fillna(MISSING_TOKEN).astype(str)
+    return out
 
 # ============== UTILS ENTROPIA ==============
 
@@ -83,37 +123,44 @@ def build_vocab_per_category(df: pd.DataFrame, cat_col: str, y_col: str) -> Dict
         vocab_map[str(cat)] = vocab
     return vocab_map
 
+# === PATCH: sostituisci completamente livello0_compute con questa versione ===
 def livello0_compute(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
-    Calcola:
-      - baseline per categoria (H_base, Hn_base)
-      - serie annuale per (categoria, anno) e ΔHn vs baseline
-    Restituisce (base_df, merged_year).
+    Livello 0 basato su etichette MENSILI:
+      - baseline per categoria su tutte le etichette mensili storiche (inclusi MISSING)
+      - serie annuale (12 mesi) e ΔHn vs baseline
     """
-    # Logging NA in Y (informativo; NON rimuoviamo righe dal df)
-    total_na_y = int(df[Y].isna().sum()) if Y in df.columns else 0
-    print(f"[Liv0] NA in {Y} (ignorati nei calcoli entropici, dati NON rimossi): {total_na_y}")
+    # costruisci etichette mensili
+    m = _monthly_labels(df)  # [X, COL_ANNO, COL_YM, y_month]
 
-    # Vocabolario fisso per categoria
-    vocab_map = build_vocab_per_category(df, X, Y)
+    # vocabolario fisso per categoria (include anche MISSING_TOKEN se presente)
+    vocab_map: Dict[str, List[str]] = (
+        m.groupby(X)["y_month"].apply(lambda s: sorted(s.dropna().astype(str).unique().tolist())).to_dict()
+    )
 
-    # Baseline per categoria
+    # Baseline per categoria (su tutta la storia mensile)
     baselines = []
-    for cat, sub in df.groupby(X):
+    for cat, sub in m.groupby(X):
         vocab = vocab_map[str(cat)]
-        Hn = normalized_on_vocab(sub[Y], vocab, alpha=ALPHA)
-        H  = entropy_on_vocab(sub[Y], vocab, alpha=ALPHA)
-        baselines.append((cat, len(vocab), H, Hn, len(sub)))
-    base_df = pd.DataFrame(baselines, columns=[X, "k_vocab", "H_base", "Hn_base", "N_tot"])
+        Hn = normalized_on_vocab(sub["y_month"], vocab, alpha=ALPHA)
+        H  = entropy_on_vocab(sub["y_month"], vocab, alpha=ALPHA)
+        baselines.append((cat, len(vocab), H, Hn, len(sub)))  # len(sub)=12*anni_osservati
+    base_df = pd.DataFrame(baselines, columns=[X, "k_vocab", "H_base", "Hn_base", "N_months_tot"])
 
-    # Serie annuale
+    # Serie annuale (sempre 12 punti per anno)
     yearly = []
-    for (cat, yr), sub in df.groupby([X, COL_ANNO]):
+    for (cat, yr), sub in m.groupby([X, COL_ANNO]):
         vocab = vocab_map[str(cat)]
-        Hn = normalized_on_vocab(sub[Y], vocab, alpha=ALPHA)
-        H  = entropy_on_vocab(sub[Y], vocab, alpha=ALPHA)
-        yearly.append((cat, yr, len(vocab), H, Hn, len(sub), int(sub[Y].isna().sum())))
-    yearly_df = pd.DataFrame(yearly, columns=[X, COL_ANNO, "k_vocab", "H", "Hn", "N", "N_na_ignored"])
+        Hn = normalized_on_vocab(sub["y_month"], vocab, alpha=ALPHA)
+        H  = entropy_on_vocab(sub["y_month"], vocab, alpha=ALPHA)
+        # conta quanti mesi MISSING in quell'anno (utile da esportare)
+        n_missing = int((sub["y_month"] == MISSING_TOKEN).sum())
+        yearly.append((cat, yr, len(vocab), H, Hn, len(sub), n_missing))
+
+    yearly_df = pd.DataFrame(
+        yearly,
+        columns=[X, COL_ANNO, "k_vocab", "H", "Hn", "N_months", "N_missing_months"]
+    )
 
     # ΔHn vs baseline
     merged_year = yearly_df.merge(base_df[[X, "H_base", "Hn_base"]], on=X, how="left")
@@ -225,8 +272,6 @@ def livello1_drilldown_mensile(
 
 # ============== LIVELLO 2 (STUB) ==============
 
-# ============== LIVELLO 2 — regole realistiche (coerente con questo file) ==============
-
 def livello2_regole_realistiche(
     to_drill: pd.DataFrame,
     l1_df: pd.DataFrame,
@@ -234,7 +279,7 @@ def livello2_regole_realistiche(
     """
     Livello 2: incrocia mesi sospetti (Livello 0/1) con volumi/importi e "cadenza"
     per classificare le vere anomalie e declassare i comportamenti regolari.
-    - Usa il RAW (INPUT_CSV_RAW) per aggregazioni mensili (N_month, sum_abs_month, PF...).
+    - Usa il RAW (INPUT_CSV_RAW) per aggregazioni mensili (N_month, sum_abs_month).
     - Costruisce baseline storiche per categoria e caratterizza la cadenza.
     - Crea una griglia completa (12 mesi) per ogni (categoria, anno) sospetto: così segnala anche mesi mancanti (N=0).
     - Unisce i delta entropici del Livello 1 (vs base e vs anno) se presenti.
@@ -247,7 +292,6 @@ def livello2_regole_realistiche(
     P_ACTIVE_LOW  = 0.10   # fuori stagione
     REACTIVATION_GAP = 6   # mesi di inattività per parlare di riattivazione
     ENTROPY_BONUS = 0.30   # soglia per "entropy_shift_support" che aumenta severità
-    # banda robusta per importi: tau = max(3*MAD, 0.2*mediana)
     MAD_MULT = 3.0
     REL_BAND = 0.20
 
@@ -262,22 +306,6 @@ def livello2_regole_realistiche(
         if d.isna().all():
             d = pd.to_datetime(s, errors="coerce", dayfirst=True)
         return d
-
-    def _to_bool01(x):
-        if x is None or (isinstance(x, float) and np.isnan(x)):
-            return pd.NA
-        s = str(x).strip().lower()
-        if s in {"1", "true", "vero", "si", "sì", "y", "yes"}:
-            return 1
-        if s in {"0", "false", "falso", "no", "n", ""}:
-            return 0
-        try:
-            f = float(s.replace(",", "."))
-            if f == 1.0: return 1
-            if f == 0.0: return 0
-        except:
-            pass
-        return pd.NA
 
     def _agg_monthly_raw(raw: pd.DataFrame) -> pd.DataFrame:
         # colonne tempo
@@ -302,33 +330,16 @@ def livello2_regole_realistiche(
         else:
             raw["_importo_num"] = pd.NA
 
-        # passaggio_fondi
-        if "passaggio_fondi" in raw.columns:
-            raw["_pf01"] = raw["passaggio_fondi"].apply(_to_bool01).astype("Int64")
-        else:
-            raw["_pf01"] = pd.NA
-
         required = ["categoria_dettaglio", "anno", "anno_mese"]
         for c in required:
             if c not in raw.columns:
                 raise ValueError(f"Colonna mancante nel RAW per aggregazione: {c}")
 
-        def _pf1_sum(x):
-            s = pd.Series(x)
-            return int(np.nansum(s.fillna(0).astype(int).to_numpy()))
-        def _pf_na_sum(x):
-            s = pd.Series(x)
-            return int(s.isna().sum())
-
         g = raw.groupby(required, dropna=False)
         out = g.agg(
             N_month=("anno_mese", "size"),
             sum_abs_month=("_importo_num", lambda x: float(np.nansum(np.abs(x)))),
-            pf1_count=("_pf01", _pf1_sum),
-            pf_na_count=("_pf01", _pf_na_sum),
         ).reset_index()
-        out["pf0_count"] = out["N_month"] - out["pf1_count"] - out["pf_na_count"]
-        out["pf1_share"] = np.where(out["N_month"] > 0, out["pf1_count"] / out["N_month"], np.nan)
         return out
 
     def _mad(x: pd.Series) -> float:
@@ -419,7 +430,7 @@ def livello2_regole_realistiche(
 
     # Unisco l'aggregato mensile alla griglia: i mesi "mancanti" diventano N=0
     monthly_full = grid.merge(monthly_raw, on=[X, COL_ANNO, COL_YM], how="left")
-    for col, fill in [("N_month", 0), ("sum_abs_month", 0.0), ("pf1_count", 0), ("pf0_count", 0), ("pf_na_count", 0), ("pf1_share", np.nan)]:
+    for col, fill in [("N_month", 0), ("sum_abs_month", 0.0)]:
         monthly_full[col] = monthly_full[col].fillna(fill)
 
     # Join con baseline e p_active_moy
@@ -454,10 +465,6 @@ def livello2_regole_realistiche(
         label = ""
         sev = 0
         rs = []
-
-        cat = getattr(r, X)
-        yr  = getattr(r, COL_ANNO)
-        ym  = getattr(r, COL_YM)
 
         N_m     = int(r.N_month or 0)
         sum_abs = float(r.sum_abs_month or 0.0)
@@ -499,7 +506,6 @@ def livello2_regole_realistiche(
 
             # ----- P2: Volumi / Importi -----
             if medN > 0 and N_m >= max(2, THRESH_N_BURST_RATIO * medN):
-                # mantieni priorità se già cadenza; altrimenti assegna
                 if not label or sev < 2:
                     label, sev = "burst_count", 2
                 rs.append(f"N_month={N_m}>= {THRESH_N_BURST_RATIO}x medN={medN:.1f}")
@@ -514,11 +520,8 @@ def livello2_regole_realistiche(
                     label, sev = "amount_drop", 2
                 rs.append(f"sum_abs={sum_abs:.2f}<=min(band_low={band_low:.2f}, {medAmt:.2f}/{THRESH_AMT_SPIKE_RATIO})")
 
-            # ----- P3: Novità / Riattivazioni (soft, senza run-length globale) -----
-            # Stima "first_ever" e "reactivation_spike" a livello anno con active_months_in_year molto basso
-            # (versione semplice e robusta senza ricostruire tutta la timeline storica qui)
+            # ----- P3: Novità / Riattivazioni (soft) -----
             if act_in_yr == 1 and N_m > 0:
-                # se unico mese attivo dell'anno
                 if not label or sev < 2:
                     label, sev = "first_ever_or_rare_year", 2
                 rs.append("solo mese attivo nell'anno")
@@ -544,7 +547,6 @@ def livello2_regole_realistiche(
     out_cols = [
         X, COL_ANNO, COL_YM,
         "N_month", "sum_abs_month",
-        "pf1_count", "pf0_count", "pf_na_count", "pf1_share",
         "med_N_month_base", "med_sum_abs_base", "mad_sum_abs_base", "mean_active_months_per_year",
         "cadence_type", "amount_band_low", "amount_band_high", "p_active_moy",
         "active_months_in_year",
@@ -586,7 +588,6 @@ def main():
     _ = livello2_regole_realistiche(to_drill, l1_df)
 
     print("\n[OK] Livelli 0/1/2 completati.\n")
-
 
 
 if __name__ == "__main__":

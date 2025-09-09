@@ -1,6 +1,6 @@
 {
   "shape": {
-    "rows": 20014,
+    "rows": 19874,
     "cols": 8
   },
   "dtypes": {
@@ -14,7 +14,7 @@
     "categoria_dettaglio": "object"
   },
   "top_missing_columns": {
-    "data": 12022,
+    "data": 11951,
     "risorsa": 0,
     "tipologia_movimento": 0,
     "tipologia_risorsa": 0,
@@ -28,7 +28,7 @@
     "categoria": 4,
     "risorsa": 3,
     "tipologia_risorsa": 2,
-    "passaggio_fondi": 2,
-    "tipologia_movimento": 2
+    "tipologia_movimento": 2,
+    "passaggio_fondi": 1
   }
 }
