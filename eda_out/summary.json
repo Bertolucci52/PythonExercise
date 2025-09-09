@@ -1,0 +1,34 @@
+{
+  "shape": {
+    "rows": 20014,
+    "cols": 8
+  },
+  "dtypes": {
+    "risorsa": "object",
+    "tipologia_risorsa": "object",
+    "tipologia_movimento": "object",
+    "importo": "float64",
+    "data": "datetime64[ns]",
+    "passaggio_fondi": "object",
+    "categoria": "object",
+    "categoria_dettaglio": "object"
+  },
+  "top_missing_columns": {
+    "data": 12022,
+    "risorsa": 0,
+    "tipologia_movimento": 0,
+    "tipologia_risorsa": 0,
+    "importo": 0,
+    "passaggio_fondi": 0,
+    "categoria": 0,
+    "categoria_dettaglio": 0
+  },
+  "categorical_cardinality": {
+    "categoria_dettaglio": 8,
+    "categoria": 4,
+    "risorsa": 3,
+    "tipologia_risorsa": 2,
+    "passaggio_fondi": 2,
+    "tipologia_movimento": 2
+  }
+}

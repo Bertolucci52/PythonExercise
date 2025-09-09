@@ -1,0 +1,9 @@
+,dtype
+risorsa,object
+tipologia_risorsa,object
+tipologia_movimento,object
+importo,float64
+data,datetime64[ns]
+passaggio_fondi,object
+categoria,object
+categoria_dettaglio,object
